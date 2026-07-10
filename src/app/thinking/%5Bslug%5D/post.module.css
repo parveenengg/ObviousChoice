@@ -1,0 +1,89 @@
+.backWrapper {
+  margin-bottom: var(--space-lg);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  transition: var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--text-color);
+}
+
+.header {
+  border-bottom: 1px solid var(--card-hover-border);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.category {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.separator {
+  opacity: 0.5;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+}
+
+/* Typography styles inside parsed markdown content */
+.content h2 {
+  font-size: 1.75rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.content h3 {
+  font-size: 1.375rem;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.content p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: var(--space-md);
+  opacity: 0.9;
+}
+
+.content ul, .content ol {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.content blockquote {
+  border-left: 2px solid var(--accent-color);
+  padding-left: var(--space-md);
+  margin-left: 0;
+  margin-bottom: var(--space-md);
+  font-style: italic;
+  color: var(--text-muted);
+}

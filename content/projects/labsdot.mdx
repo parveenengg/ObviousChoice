@@ -1,0 +1,35 @@
+---
+title: "LABSDOT"
+date: "2026-06-30"
+summary: "A modern digital agency frontend and SEO architecture designed for maximum performance, minimal bundle size, and high search visibility."
+role: "Lead Frontend Engineer & SEO Architect"
+github: "https://github.com/parveenmakwana02/labsdot-testing"
+demo: "https://labsdot.com"
+draft: false
+---
+
+## Challenge
+
+The LabsDot digital agency platform required a high-performance frontend rebuild. The existing page had slow load times (Lighthouse score under 60), layout shifts on loading custom fonts, and bloated assets that hurt mobile conversion rates and search rankings.
+
+## Thinking
+
+A digital agency selling web solutions must demonstrate technical excellence on its own homepage. Instead of using heavy component libraries or nested layouts, we designed a streamlined, single-page application focused on premium typography, optimal asset loading, and semantic HTML structure.
+
+## Process
+
+1. **Audit**: Conducted a full performance and accessibility audit of the existing codebase.
+2. **Design System**: Set up a baseline grid and fluid typography hierarchy.
+3. **Build**: Restructured the UI using modern React features with strict image optimization.
+
+## Implementation
+
+We used Vite + TypeScript + CSS Modules. By avoiding heavy framework overhead, the main bundle size was kept under 45KB. 
+- **Font Optimization**: Loaded critical fonts locally with display swap.
+- **Image Optimization**: Converted all raster graphics to WebP/AVIF formats with strict aspect ratios to eliminate layout shifts (CLS).
+- **A11y**: Standardized form elements and contrast ratios to achieve 100/100 accessibility score.
+
+## Lessons
+
+- **Vanilla first**: Keeping dependencies minimal leads to long-term maintainability.
+- **Performance is user experience**: Fast page loads directly correlate with higher inquiry rates.

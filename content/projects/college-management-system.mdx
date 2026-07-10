@@ -1,0 +1,35 @@
+---
+title: "College Management System"
+date: "2026-05-20"
+summary: "A robust Java-based command-line interface application demonstrating OOP principles, data structure modeling, and file persistence."
+role: "Software Engineer"
+github: "https://github.com/parveenmakwana02/java-practicals"
+demo: "#"
+draft: false
+---
+
+## Challenge
+
+Educational software is often bloated and unintuitive. The challenge was to create a clean, bug-free, command-line Java application to manage college resources, student records, and class schedules using clean object-oriented design and file-based data backup.
+
+## Thinking
+
+A CLI tool should be fast and bulletproof. Rather than writing ad-hoc logic, we defined concrete object schemas (`Student`, `Teacher`, `Course`, `Department`) and used strict interfaces to handle data persistence and user commands.
+
+## Process
+
+1. **Modeling**: Designed class structures using inheritance, encapsulation, and interfaces.
+2. **I/O Integration**: Implemented serialization classes to load and save system state from files.
+3. **Menu Flow**: Designed a loop-based terminal interface with input validation.
+
+## Implementation
+
+- **Language**: Java 17.
+- **Concepts**: Encapsulation, inheritance, polymorphism, polymorphism interfaces.
+- **Persistence**: File I/O stream serialization with custom error handlers.
+- **Robustness**: Custom exception handling for student double-registrations or invalid ID lookups.
+
+## Lessons
+
+- **Object design**: Well-defined object boundaries in Java make extending software significantly simpler.
+- **Error handling**: Defensive coding and strict validation at the controller boundary prevent runtime application crashes.

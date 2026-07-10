@@ -1,0 +1,36 @@
+---
+title: "SyncPad"
+date: "2026-06-15"
+summary: "A lightweight, markdown-focused collaborative note sharing platform built on Node.js, Express, and EJS templates."
+role: "Full Stack Developer"
+github: "https://github.com/parveenmakwana02/SyncPad-MiniProject"
+demo: "https://syncpad.onrender.com"
+draft: false
+---
+
+## Challenge
+
+Collaborative text-sharing web apps are often complex, requiring heavy client-side frameworks and database setups. The goal was to build a fast, lightweight notes-sharing platform that could run with minimal server overhead and load instantly on low-bandwidth mobile connections.
+
+## Thinking
+
+By moving rendering to the server using EJS templates and using a simple JSON file-based database for persistence, we could bypass complex client-side bundles entirely. The entire application relies on semantic HTML and vanilla JavaScript for basic interactions.
+
+## Process
+
+1. **Schema Design**: Modeled notes with unique IDs, user keys, and timestamps.
+2. **Controller Logic**: Implemented safe CRUD operations and login validation.
+3. **Frontend Styling**: Structured pages (login, signup, create, edit, view note) with a minimal, dark-themed CSS system.
+
+## Implementation
+
+Built using:
+- **Backend**: Node.js, Express, and express-session.
+- **Frontend**: EJS (Embedded JavaScript) templating and vanilla CSS.
+- **Security**: Password hashing and CSRF validation layers.
+- **Persistence**: Flat-file JSON structure for speed and simple debugging.
+
+## Lessons
+
+- **Server-rendered speed**: Server-side rendering (SSR) of static content provides superior LCP performance.
+- **Simplicity scales**: Flat files are excellent for rapid prototyping and low-volume utility tools before upgrading to PostgreSQL or SQLite.

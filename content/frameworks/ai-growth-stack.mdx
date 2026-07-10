@@ -1,0 +1,23 @@
+---
+title: "AI Growth Stack"
+date: "2026-07-06"
+summary: "A modern software architecture that integrates customized LLMs, serverless databases, and automation pipelines into daily operations."
+problem: "Founders waste hours on manual copywriting, lead research, and basic report formatting, creating an operational bottleneck."
+mistakes: "Using generic ChatGPT wrappers, over-complicating workflows with heavy frameworks, and failing to include human validation gates."
+draft: false
+---
+
+The AI Growth Stack is a lightweight operational architecture that integrates automated LLM logic into B2B business workflows.
+
+## The Architecture
+
+1. **Automation Layer**: n8n, Python cron runners, or Node.js workers to trigger events.
+2. **Context Layer**: Vector search and semantic databases (Pinecone, pgvector) containing business guidelines, templates, and frameworks.
+3. **Execution Layer**: API calls to advanced models (Claude, Gemini, GPT-4o) with strict schema matching (structured output).
+4. **Validation Gate**: A minimal admin UI where a human reviews and approves outputs before they are sent to clients.
+
+## Real-World Application
+
+We deploy the AI Growth Stack to automate:
+- **Client Diagnostics**: Crawling a client's website, analyzing the messaging, and drafting a custom PDF scorecard.
+- **Reporting Pipelines**: Aggregating weekly metrics and summarizing them into bulleted, professional summaries.

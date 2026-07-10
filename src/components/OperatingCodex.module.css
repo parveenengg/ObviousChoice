@@ -1,0 +1,103 @@
+.container {
+  width: 100%;
+  border: var(--border-thin);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+  box-sizing: border-box;
+}
+
+.codexLabel {
+  display: block;
+  font-family: var(--font-sans), monospace;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+  border-bottom: var(--border-thin);
+  padding-bottom: 0.5rem;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.guideLine {
+  stroke: var(--text-color);
+  stroke-width: 0.5px;
+  opacity: 0.04;
+  stroke-dasharray: 4, 4;
+}
+
+.outerCircle {
+  fill: none;
+  stroke: var(--text-color);
+  stroke-width: 0.75px;
+  opacity: 0.05;
+  stroke-dasharray: 4, 2;
+}
+
+.coreCircle {
+  fill: var(--bg-color);
+  stroke: var(--text-color);
+  stroke-width: 0.75px;
+  opacity: 0.15;
+}
+
+.coreCircleActive {
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 1px;
+  opacity: 0.35;
+  stroke-dasharray: 4, 4;
+  transform-origin: 150px 120px;
+  animation: spinCore 15s linear infinite;
+}
+
+.coreText {
+  font-family: var(--font-sans), monospace;
+  font-size: 7px;
+  font-weight: 700;
+  fill: var(--accent-color);
+  letter-spacing: 0.08em;
+}
+
+.node {
+  fill: var(--bg-color);
+  stroke: var(--border-thin);
+  stroke-width: 0.75px;
+  transition: var(--transition-fast);
+}
+
+.node:hover {
+  stroke-color: var(--text-color);
+}
+
+.nodeText {
+  font-family: var(--font-sans), monospace;
+  font-size: 6.5px;
+  font-weight: 600;
+  fill: var(--text-color);
+  letter-spacing: 0.05em;
+}
+
+.annotations {
+  opacity: 0.45;
+}
+
+.annotationText {
+  font-family: var(--font-serif);
+  font-size: 6px;
+  font-style: italic;
+  fill: var(--text-muted);
+}
+
+@keyframes spinCore {
+  to { transform: rotate(360deg); }
+}

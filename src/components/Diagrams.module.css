@@ -1,0 +1,395 @@
+.wrapper {
+  width: 100%;
+  background-color: var(--card-bg);
+  border: var(--border-thin);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: var(--space-sm) 0;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+  transition: var(--transition-smooth);
+}
+
+.wrapper:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: var(--border-thin);
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+:root[data-theme='dark'] .cardHeader {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.diagNum {
+  font-family: var(--font-sans), monospace;
+  font-size: 0.625rem; /* 10px */
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent-color);
+}
+
+.diagTitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.8125rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.svgContainer {
+  width: 100%;
+  padding: var(--space-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Common diagram elements */
+.fineGrid {
+  pointer-events: none;
+}
+
+/* 1. Obvious Choice Venn Diagram */
+.vennCircle {
+  fill: none;
+  stroke: var(--text-color);
+  stroke-width: 0.75px;
+  opacity: 0.1;
+  transition: var(--transition-smooth);
+}
+
+.wrapper:hover .vennCircle {
+  opacity: 0.16;
+  stroke: var(--accent-color);
+}
+
+.labelHeading {
+  font-family: var(--font-sans), monospace;
+  font-size: 8px;
+  font-weight: 600;
+  fill: var(--text-color);
+  letter-spacing: 0.08em;
+}
+
+.labelSub {
+  font-family: var(--font-sans);
+  font-size: 6.5px;
+  fill: var(--text-muted);
+  opacity: 0.8;
+}
+
+.intersectionLabels text {
+  font-family: var(--font-sans);
+  font-size: 6px;
+  font-weight: 500;
+  fill: var(--text-muted);
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+}
+
+.centerBadge {
+  fill: var(--text-color);
+  transition: var(--transition-fast);
+}
+
+.centerBadgeText {
+  font-family: var(--font-sans), monospace;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.centerPoint {
+  animation: pulseCore 3s ease-in-out infinite;
+}
+
+.radarPing {
+  transform-origin: 200px 155px;
+  animation: radarSweep 6s linear infinite;
+}
+
+/* 2. Authority Loop Flywheel */
+.loopPath {
+  fill: none;
+  stroke: var(--text-color);
+  stroke-width: 0.75px;
+  opacity: 0.08;
+}
+
+.loopPathActive {
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 1.25px;
+  opacity: 0.3;
+  stroke-dasharray: 8, 8;
+  animation: loopMarch 20s linear infinite;
+}
+
+.nodeBox {
+  fill: var(--bg-color);
+  stroke: var(--border-thin);
+  stroke-width: 0.75px;
+  transition: var(--transition-fast);
+}
+
+.wrapper:hover .nodeBox {
+  stroke-color: var(--border-strong);
+}
+
+.nodeLabel {
+  font-family: var(--font-sans), monospace;
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.nodeLabelMuted {
+  font-family: var(--font-sans);
+  font-size: 6.5px;
+  opacity: 0.85;
+}
+
+.flywheelCoreText {
+  font-family: var(--font-sans), monospace;
+  font-size: 5.5px;
+  font-weight: 600;
+  fill: var(--text-muted);
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+/* 3. Trust Engine Pipeline */
+.treeNodeActive {
+  fill: var(--bg-color);
+  stroke: var(--accent-color);
+  stroke-width: 1px;
+  transition: var(--transition-fast);
+}
+
+.treeNodeDanger {
+  fill: var(--bg-color);
+  stroke: #EF4444;
+  stroke-width: 0.75px;
+  opacity: 0.8;
+  transition: var(--transition-fast);
+}
+
+.treeLinkActive {
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 1px;
+  opacity: 0.4;
+  stroke-dasharray: 4, 3;
+  animation: pathMarch 15s linear infinite;
+}
+
+.treeLinkDanger {
+  fill: none;
+  stroke: #EF4444;
+  stroke-width: 0.75px;
+  opacity: 0.2;
+}
+
+.textNodeTitle {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 600;
+  fill: var(--text-color);
+}
+
+.textNodeDangerTitle {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 600;
+  fill: #EF4444;
+}
+
+.textNodeDesc {
+  font-family: var(--font-sans);
+  font-size: 6.5px;
+  fill: var(--text-muted);
+  opacity: 0.85;
+}
+
+.pathTag {
+  font-family: var(--font-sans), monospace;
+  font-size: 6px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.outcomeBadge {
+  fill: var(--bg-color);
+  stroke: var(--border-thin);
+  stroke-width: 0.75px;
+}
+
+.outcomeText {
+  font-family: var(--font-sans), monospace;
+  font-size: 6.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+/* 4. AI Growth Stack Architecture */
+.isoGroup {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.isoLayer {
+  fill: var(--bg-color);
+  stroke: var(--border-thin);
+  stroke-width: 0.75px;
+  transition: var(--transition-fast);
+}
+
+.isoGroup:hover {
+  transform: translateY(-3px);
+}
+
+.isoGroup:hover .isoLayer {
+  stroke: var(--accent-color);
+}
+
+.isoNum {
+  font-family: var(--font-sans), monospace;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.isoLabel {
+  font-family: var(--font-sans), monospace;
+  font-size: 8px;
+  font-weight: 600;
+  fill: var(--text-color);
+  letter-spacing: 0.05em;
+}
+
+.isoDesc {
+  font-family: var(--font-sans);
+  font-size: 6.5px;
+  fill: var(--text-muted);
+  opacity: 0.85;
+}
+
+.wireLineActive {
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 1px;
+  stroke-dasharray: 3, 3;
+  opacity: 0.3;
+  animation: lineFlow 8s linear infinite;
+}
+
+/* 5. Strategic Positioning Matrix */
+.matrixAxisLabel {
+  font-family: var(--font-sans), monospace;
+  font-size: 6.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.quadrantTitle {
+  font-family: var(--font-serif);
+  font-size: 8.5px;
+}
+
+.quadrantTitleActive {
+  font-family: var(--font-serif);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.quadrantDesc {
+  font-family: var(--font-sans);
+  font-size: 6.5px;
+  opacity: 0.8;
+}
+
+.quadrantDescActive {
+  font-family: var(--font-sans);
+  font-size: 6.5px;
+  fill: var(--text-color);
+}
+
+.matrixPoint {
+  fill: var(--text-color);
+  opacity: 0.2;
+}
+
+.matrixPointActive {
+  fill: var(--accent-color);
+  animation: pulseCore 3s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes pulseCore {
+  0%, 100% {
+    r: 4px;
+    opacity: 0.75;
+  }
+  50% {
+    r: 5.5px;
+    opacity: 0.95;
+  }
+}
+
+@keyframes pulseCoreActive {
+  0%, 100% {
+    r: 5px;
+  }
+  50% {
+    r: 7px;
+  }
+}
+
+@keyframes loopMarch {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes pathMarch {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes lineFlow {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
+
+@keyframes radarSweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseCore {
+  0%, 100% {
+    r: 4px;
+    opacity: 0.8;
+  }
+  50% {
+    r: 6px;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,215 @@
+.container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 580px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.canvasContainer {
+  width: 100%;
+  height: 100%;
+  border: var(--border-thin);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+}
+
+.gridOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(var(--border-thin) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-thin) 1px, transparent 1px);
+  background-size: 25px 25px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.svg {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Axis lines and guides */
+.centerAxis {
+  stroke: var(--text-color);
+  stroke-width: 0.75px;
+  stroke-dasharray: 4, 8;
+  opacity: 0.08;
+}
+
+.diagonalAxis {
+  stroke: var(--text-color);
+  stroke-width: 0.5px;
+  stroke-dasharray: 2, 6;
+  opacity: 0.05;
+}
+
+/* Concentric System Orbits */
+.orbitOuter {
+  fill: none;
+  stroke: var(--text-color);
+  stroke-width: 0.75px;
+  stroke-dasharray: 6, 8;
+  opacity: 0.08;
+}
+
+.orbitMiddle {
+  fill: none;
+  stroke: var(--text-color);
+  stroke-width: 0.75px;
+  stroke-dasharray: 4, 6;
+  opacity: 0.1;
+}
+
+.orbitInner {
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 1px;
+  stroke-dasharray: 2, 4;
+  opacity: 0.15;
+}
+
+/* Signal Hub (Central element) */
+.signalHubCore {
+  fill: var(--accent-color);
+  filter: drop-shadow(0 0 6px rgba(79, 125, 255, 0.6));
+}
+
+.signalHubRing {
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 0.75px;
+  opacity: 0.4;
+  animation: pulseHubRing 4s ease-in-out infinite;
+}
+
+/* Rotating Groups (Extremely slow motion, almost invisible) */
+.rotatingOuter {
+  transform-origin: 250px 250px;
+  animation: slowRotation 120s linear infinite;
+}
+
+.rotatingMiddle {
+  transform-origin: 250px 250px;
+  animation: slowRotationReverse 90s linear infinite;
+}
+
+/* Nodes and Connections */
+.nodeActive {
+  fill: var(--accent-color);
+  filter: drop-shadow(0 0 4px rgba(79, 125, 255, 0.4));
+  animation: pulseNode 3s ease-in-out infinite;
+}
+
+.nodeMuted {
+  fill: var(--text-color);
+  opacity: 0.35;
+  animation: pulseNodeMuted 4s ease-in-out infinite;
+}
+
+.nodeConnector {
+  stroke: var(--text-color);
+  stroke-width: 0.5px;
+  stroke-dasharray: 2, 4;
+  opacity: 0.07;
+}
+
+/* System Typography and Labels */
+.hubText {
+  font-family: var(--font-sans), monospace;
+  font-size: 8px;
+  font-weight: 700;
+  fill: var(--accent-color);
+  letter-spacing: 0.15em;
+}
+
+.nodeLabel {
+  font-family: var(--font-sans), monospace;
+  font-size: 8px;
+  font-weight: 600;
+  fill: var(--text-color);
+  letter-spacing: 0.1em;
+  opacity: 0.75;
+}
+
+.nodeValue {
+  font-family: var(--font-sans), monospace;
+  font-size: 6.5px;
+  fill: var(--text-muted);
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+}
+
+.systemReadouts text {
+  font-family: var(--font-sans), monospace;
+  font-size: 7px;
+  fill: var(--text-muted);
+  letter-spacing: 0.05em;
+  opacity: 0.35;
+}
+
+/* Keyframes */
+@keyframes slowRotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slowRotationReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulseHubRing {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.15) translate(-32px, -32px); /* Scale around origin */
+    opacity: 0.45;
+  }
+}
+
+@keyframes pulseNode {
+  0%, 100% {
+    r: 4.5px;
+  }
+  50% {
+    r: 6px;
+    fill: var(--accent-color);
+  }
+}
+
+@keyframes pulseNodeMuted {
+  0%, 100% {
+    r: 3.5px;
+    opacity: 0.3;
+  }
+  50% {
+    r: 4.5px;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 320px;
+  }
+}
