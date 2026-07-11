@@ -3,7 +3,7 @@ import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ScreenshotCTA from "@/components/ScreenshotCTA";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -107,7 +107,7 @@ export default function RootLayout({
         <Navbar />
         <main style={{ flex: "1 0 auto", marginTop: "70px" }}>{children}</main>
         <Footer />
-        <ScreenshotCTA />
+
       </body>
     </html>
   );
