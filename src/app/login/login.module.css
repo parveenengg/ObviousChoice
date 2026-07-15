@@ -1,0 +1,80 @@
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  padding: var(--space-md);
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--space-xl) var(--space-lg);
+  background-color: var(--bg-surface);
+  border: var(--border-subtle);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: var(--space-sm);
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-lg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  text-align: left;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.input {
+  width: 100%;
+  background-color: var(--bg-elevated);
+  border: var(--border-strong);
+  color: var(--text-color);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  transition: var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--text-secondary);
+}
+
+.error {
+  color: var(--crimson);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-sm);
+}
+
+.submitBtn {
+  margin-top: var(--space-sm);
+  width: 100%;
+}

@@ -1,0 +1,53 @@
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: -200%;
+  width: 400%;
+  height: 400%;
+  background: transparent;
+  filter: url(#film-grain);
+  animation: grainShift 0.5s steps(8) infinite;
+}
+
+@keyframes grainShift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-2%, -3%);
+  }
+  20% {
+    transform: translate(3%, 1%);
+  }
+  30% {
+    transform: translate(-1%, 2%);
+  }
+  40% {
+    transform: translate(2%, -1%);
+  }
+  50% {
+    transform: translate(-3%, 3%);
+  }
+  60% {
+    transform: translate(1%, -2%);
+  }
+  70% {
+    transform: translate(-2%, 1%);
+  }
+  80% {
+    transform: translate(3%, -3%);
+  }
+  90% {
+    transform: translate(-1%, -1%);
+  }
+}

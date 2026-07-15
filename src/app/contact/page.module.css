@@ -1,0 +1,134 @@
+.canvas {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.header {
+  padding: 180px max(2rem, 5vw) 80px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 max(2rem, 5vw) var(--space-xxxl);
+}
+
+.qualification {
+  margin-bottom: var(--space-xxl);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.qualTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--text-color);
+}
+
+.qualList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.qualItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.qualItem svg {
+  margin-top: 4px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 600px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input, .textarea {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 4px;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.submitBtn {
+  background: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  align-self: flex-start;
+  margin-top: var(--space-md);
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 140px max(1.5rem, 4vw) 60px;
+  }
+}

@@ -1,0 +1,81 @@
+.canvas {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.header {
+  padding: 180px max(2rem, 5vw) 80px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 max(2rem, 5vw) var(--space-xxxl);
+}
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 120px;
+}
+
+.prose h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+  margin: var(--space-xl) 0 var(--space-sm) 0;
+}
+
+.prose p {
+  margin: 0;
+}
+
+.signature {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signoff {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 4px 0;
+}
+
+.role {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 140px max(1.5rem, 4vw) 60px;
+  }
+}

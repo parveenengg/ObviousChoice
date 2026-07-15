@@ -1,1185 +1,997 @@
+/* ============================================
+   OBVIOUS CHOICE — CINEMATIC PAGE STYLES
+   Single immersive scrolling experience
+   ============================================ */
+
 .canvas {
   width: 100%;
-}
-
-/* Section number labels */
-.sectionMetaNum {
-  display: block;
-  font-family: var(--font-sans), monospace;
-  font-size: 0.6875rem; /* 11px */
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent-color);
-  margin-bottom: var(--space-xs);
-}
-
-/* 1. HERO SECTION */
-.heroSection {
-  min-height: 95vh;
-  display: flex;
-  align-items: center;
-  padding-top: clamp(8rem, 15vw, 12rem);
-  padding-bottom: clamp(6rem, 10vw, 8rem);
   position: relative;
 }
 
-.heroGrid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: var(--space-xl);
-  align-items: center;
-  width: 100%;
-}
+/* ============================================
+   SECTION META LABELS
+   ============================================ */
 
-.heroLeft {
-  max-width: 760px;
-}
-
-.tag {
+.sectionLabel {
   display: inline-block;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent-color);
+  letter-spacing: 0.15em;
+  color: var(--accent);
   margin-bottom: var(--space-md);
 }
 
-.heroTitle {
-  font-size: clamp(3.25rem, 6.5vw, 5.85rem);
+.sectionDivider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin-bottom: var(--space-lg);
+}
+
+/* ============================================
+   1. HERO — Full Viewport Cinematic Statement
+   ============================================ */
+
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-xxl) max(2rem, 5vw);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(47, 107, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+.heroHeadline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-bottom: var(--space-lg);
+}
+
+.heroWord {
+  font-family: var(--font-sans);
+  font-size: clamp(4.5rem, 14vw, 12rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  display: block;
+}
+
+.heroWordAccent {
+  color: var(--accent);
+}
+
+.heroSubheadline {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.375rem);
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-xl);
+  max-width: 500px;
+}
+
+.heroCtas {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+/* ============================================
+   2. BELIEF — Conviction Section
+   ============================================ */
+
+.beliefSection {
+  padding: var(--space-xxl) 0;
+  position: relative;
+  border-top: var(--border-subtle);
+}
+
+.beliefInner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 max(2rem, 5vw);
+}
+
+.beliefHeadline {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.04em;
-  margin-bottom: var(--space-md);
-}
-
-.heroDesc {
-  font-size: 1.25rem;
-  color: var(--text-muted);
-  line-height: 1.6;
+  color: var(--text-color);
   margin-bottom: var(--space-xl);
-  max-width: 640px;
+  max-width: 800px;
 }
 
-.heroActions {
-  display: flex;
-  gap: var(--space-md);
-}
-
-.heroRight {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 2. PHILOSOPHY SECTION */
-.philosophySection {
-  padding-top: clamp(8rem, 14vw, 14rem);
-  padding-bottom: clamp(8rem, 14vw, 14rem);
-  border-bottom: var(--border-thin);
-  background-color: rgba(0, 0, 0, 0.005);
-}
-
-:root[data-theme='dark'] .philosophySection {
-  background-color: rgba(255, 255, 255, 0.003);
-}
-
-.philosophyContent {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.philosophyQuote {
-  font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  color: var(--text-color);
-  font-weight: 400;
-  margin-bottom: var(--space-xl);
-}
-
-.quoteFade {
+.beliefHeadlineHighlight {
   color: var(--text-muted);
-  opacity: 0.75;
 }
 
-.philosophyBody {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.editorialLead {
-  font-size: 1.375rem;
-  line-height: 1.65;
-  color: var(--text-color);
-  max-width: 100%;
-  margin-bottom: var(--space-sm);
-}
-
-.philosophyColumns {
+.beliefPillars {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-xl);
 }
 
-.philosophyColumns p {
-  font-size: 1.0625rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-  margin-bottom: 0;
-}
-
-/* Common Section Headers */
-.sectionHeader {
-  margin-bottom: var(--space-xl);
-  max-width: 720px;
-}
-
-.sectionTitle {
-  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin-bottom: var(--space-xs);
-}
-
-.sectionSubtitle {
-  font-size: 1.125rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 0;
-}
-
-/* 3. FRAMEWORKS SECTION */
-.frameworksSection {
-  padding-top: clamp(8rem, 15vw, 15rem);
-  padding-bottom: clamp(8rem, 15vw, 15rem);
-  border-bottom: var(--border-thin);
-}
-
-.featuredFramework {
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-xxl);
-  padding-bottom: var(--space-xl);
-  border-bottom: var(--border-thin);
-  width: 100%;
-}
-
-.featuredFrameworkGrid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-xl);
-  align-items: center;
-}
-
-.featuredFrameworkLeft {
-  max-width: 580px;
-}
-
-.featuredFrameworkTitle {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  line-height: 1.15;
-  margin-bottom: var(--space-sm);
-}
-
-.featuredFrameworkTitle a {
-  color: var(--text-color);
-  transition: var(--transition-fast);
-}
-
-.featuredFrameworkTitle a:hover {
-  color: var(--accent-color);
-}
-
-.featuredFrameworkSummary {
-  font-size: 1.1875rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: var(--space-lg);
-}
-
-.frameworkSpecs {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  margin-bottom: var(--space-lg);
-}
-
-.frameworkDetailBlock {
-  border-top: var(--border-thin);
-  padding-top: var(--space-xs);
-}
-
-.detailBlockLabelDanger {
-  display: block;
-  font-family: var(--font-sans), monospace;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #EF4444;
-  margin-bottom: 0.25rem;
-}
-
-.detailBlockLabelAccent {
-  display: block;
-  font-family: var(--font-sans), monospace;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent-color);
-  margin-bottom: 0.25rem;
-}
-
-.detailBlockText {
-  font-size: 0.9375rem;
-  color: var(--text-color);
-  opacity: 0.85;
-  line-height: 1.5;
-  margin-bottom: 0;
-}
-
-.frameworkActionBox {
-  margin-top: var(--space-md);
-}
-
-.featuredFrameworkRight {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.frameworksList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xxl);
-}
-
-.frameworkRow {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-xl);
-  align-items: center;
-}
-
-.frameworkRowReverse {
-  grid-template-columns: 0.9fr 1.1fr;
-}
-
-.frameworkRowReverse .frameworkLeft {
-  grid-column: 2;
-}
-
-.frameworkRowReverse .frameworkRight {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.frameworkLeft {
-  max-width: 580px;
-}
-
-.frameworkIndex {
-  font-family: var(--font-sans), monospace;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.1em;
-  display: block;
-  margin-bottom: 0.25rem;
-  opacity: 0.7;
-}
-
-.frameworkTitle {
-  font-size: 2.25rem;
-  line-height: 1.15;
-  margin-bottom: var(--space-sm);
-}
-
-.frameworkTitle a {
-  color: var(--text-color);
-  transition: var(--transition-fast);
-}
-
-.frameworkTitle a:hover {
-  color: var(--accent-color);
-}
-
-.frameworkSummary {
-  font-size: 1.125rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: var(--space-md);
-}
-
-.frameworkRight {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.diagramFallback {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-/* 4. THINKING SECTION */
-.thinkingSection {
-  padding-top: clamp(8rem, 15vw, 15rem);
-  padding-bottom: clamp(8rem, 15vw, 15rem);
-  border-bottom: var(--border-thin);
-}
-
-.thinkingGrid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: var(--space-xl);
-  margin-top: var(--space-xl);
-}
-
-/* Large Featured Essay Card */
-.featuredCard {
-  border: 1px solid var(--card-hover-border);
-  border-radius: 4px;
-  background-color: var(--card-bg);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: none;
+.beliefPillar {
+  padding: var(--space-xxl) var(--space-xl);
+  border: var(--border-subtle);
+  border-radius: 8px;
+  background: var(--bg-surface);
+  text-align: left;
   transition: var(--transition-smooth);
-}
-
-.featuredCard:hover {
-  box-shadow: var(--card-shadow-hover);
-  background-color: var(--card-hover-bg);
-}
-
-.cardImageContainer {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-bottom: var(--border-thin);
-  background-color: rgba(0, 0, 0, 0.005);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-:root[data-theme='dark'] .cardImageContainer {
-  background-color: rgba(255, 255, 255, 0.003);
-}
-
-.abstractGraphic {
-  width: 100%;
-  height: 100%;
-  display: block;
-  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.featuredCard:hover .abstractGraphic {
-  transform: scale(1.03);
-}
-
-.cardMain {
-  padding: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.cardHeaderMeta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--space-xs);
-}
-
-.cardCategory {
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--accent-color);
-}
-
-.cardDate {
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.8;
-}
-
-.cardTitle {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  line-height: 1.2;
-  margin-bottom: var(--space-xs);
-}
-
-.cardTitle a {
-  color: var(--text-color);
-  transition: var(--transition-fast);
-}
-
-.cardTitle a:hover {
-  color: var(--accent-color);
-}
-
-.cardExcerpt {
-  font-size: 1.0625rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: var(--space-lg);
-  flex: 1;
-}
-
-.cardFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: var(--border-thin);
-  padding-top: var(--space-xs);
-}
-
-.cardReadTime {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-}
-
-/* Secondary Smaller Cards */
-.secondaryCardStack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.smallCard {
-  border: 1px solid var(--card-hover-border);
-  border-radius: 4px;
-  background-color: var(--card-bg);
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 0.35fr 0.65fr;
-  box-shadow: none;
-  transition: var(--transition-smooth);
-}
-
-.smallCard:hover {
-  box-shadow: var(--card-shadow-hover);
-  background-color: var(--card-hover-bg);
-}
-
-.smallCardImage {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.005);
-  border-right: var(--border-thin);
   position: relative;
   overflow: hidden;
 }
 
-:root[data-theme='dark'] .smallCardImage {
-  background-color: rgba(255, 255, 255, 0.003);
-}
-
-.abstractGraphicSmall {
-  width: 100%;
-  height: 100%;
-  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.smallCard:hover .abstractGraphicSmall {
-  transform: scale(1.05);
-}
-
-.smallCardBody {
-  padding: var(--space-sm);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.smallCardTitle {
-  font-size: 1.1875rem;
-  line-height: 1.25;
-  margin-top: 0.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.smallCardTitle a {
-  color: var(--text-color);
-  transition: var(--transition-fast);
-}
-
-.smallCardTitle a:hover {
-  color: var(--accent-color);
-}
-
-.smallCardExcerpt {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: var(--space-sm);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.smallCardFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: var(--border-thin);
-  padding-top: 0.5rem;
-}
-
-.graphicMonoText {
-  font-family: var(--font-sans), monospace;
-  font-size: 7px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
-
-/* 5. ABOUT SECTION */
-.aboutSection {
-  padding-top: clamp(8rem, 15vw, 15rem);
-  padding-bottom: clamp(8rem, 15vw, 15rem);
-  border-bottom: var(--border-thin);
-  background-color: rgba(0, 0, 0, 0.005);
-}
-
-:root[data-theme='dark'] .aboutSection {
-  background-color: rgba(255, 255, 255, 0.003);
-}
-
-.aboutGrid {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: var(--space-xl);
-  align-items: center;
-}
-
-.aboutLeft {
-  max-width: 640px;
-}
-
-.aboutContent {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-  margin-top: var(--space-lg);
-}
-
-.aboutStoryBlock h4, .aboutStoryTitle {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.375rem;
-  margin-bottom: var(--space-xs);
-  color: var(--text-color);
-}
-
-.aboutStoryBlock p {
-  font-size: 1rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.aboutRight {
-  display: flex;
-  justify-content: center;
-  padding: var(--space-md);
-}
-
-.portraitFrame {
-  border: var(--border-thin);
-  padding: 1.5rem;
-  border-radius: 4px;
-  background-color: var(--card-bg);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
-  max-width: 280px;
-}
-
-.portrait {
-  border-radius: 2px;
-  filter: grayscale(1);
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.portraitFrame:hover .portrait {
-  filter: grayscale(0.2);
-  transform: scale(1.02);
-}
-
-.aboutCol p, .aboutColFull p {
-  font-size: 0.9375rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-/* 6. NEWSLETTER PRODUCT SECTION */
-.newsletterProductSection {
-  padding-top: clamp(8rem, 15vw, 15rem);
-  padding-bottom: clamp(8rem, 15vw, 15rem);
-  border-bottom: var(--border-thin);
-}
-
-.newsletterProductGrid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-xl);
-  align-items: center;
-}
-
-.newsletterProductInfo {
-  max-width: 580px;
-}
-
-.newsletterProductTitle {
-  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
-  letter-spacing: -0.03em;
-  margin-bottom: var(--space-xs);
-}
-
-.newsletterProductSubtitle {
-  font-size: 1.1875rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: var(--space-lg);
-}
-
-.benefitsList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  list-style: none;
-  margin-bottom: var(--space-xl);
-}
-
-.benefitsList li {
-  display: flex;
-  gap: var(--space-sm);
-  align-items: start;
-}
-
-.checkmark {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: rgba(79, 125, 255, 0.08);
-  color: var(--accent-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 0.15rem;
-}
-
-.benefitsList strong {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--text-color);
-}
-
-.benefitsList span {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-.newsletterSubscribeBox {
-  width: 100%;
-}
-
-.subscriberCounter {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-top: 0.5rem;
-  opacity: 0.8;
-}
-
-/* Previous Issue Preview Card */
-.newsletterProductPreview {
-  display: flex;
-  justify-content: center;
-}
-
-.previewContainer {
-  border: var(--border-thin);
-  border-radius: 4px;
-  background-color: var(--card-bg);
-  padding: var(--space-md);
-  position: relative;
-  max-width: 360px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  transition: var(--transition-smooth);
-}
-
-.previewContainer:hover {
-  border-color: var(--border-strong);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.04);
-}
-
-.previewHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.previewTag {
-  font-family: var(--font-sans), monospace;
-  font-size: 0.625rem;
-  font-weight: 700;
-  color: var(--accent-color);
-  letter-spacing: 0.08em;
-}
-
-.previewIssueNum {
-  font-family: var(--font-sans), monospace;
-  font-size: 0.625rem;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
-  opacity: 0.7;
-}
-
-.previewIssueTitle {
-  font-family: var(--font-serif);
-  font-size: 1.375rem;
-  line-height: 1.25;
-  color: var(--text-color);
-}
-
-.previewText {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.previewFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: var(--border-thin);
-  padding-top: var(--space-xs);
-  margin-top: 0.5rem;
-}
-
-.previewMeta {
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  color: var(--text-muted);
-}
-
-.previewLinkText {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-color);
-  transition: var(--transition-fast);
-}
-
-.previewContainer:hover .previewLinkText {
-  color: var(--accent-color);
-}
-
-.previewBlueprintLines {
+.beliefPillar::before {
+  content: "";
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background-image: 
-    linear-gradient(var(--border-thin) 0.5px, transparent 0.5px),
-    linear-gradient(90deg, var(--border-thin) 0.5px, transparent 0.5px);
-  background-size: 30px 30px;
-  opacity: 0.04;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.beliefPillar:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: var(--bg-elevated);
+  transform: translateY(-4px);
+}
+
+.beliefPillar:hover::before {
+  opacity: 1;
+}
+
+.beliefPillarNumber {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.beliefPillarTitle {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
+  margin-bottom: var(--space-xs);
+}
+
+.beliefPillarDesc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ============================================
+   3. SYSTEM — Horizontal Scroll Journey
+   ============================================ */
+
+.systemSection {
+  padding: var(--space-xxl) 0;
+  border-top: var(--border-subtle);
+  overflow: hidden;
+}
+
+.systemHeader {
+  padding: 0 max(2rem, 5vw);
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-xl);
+}
+
+.systemTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-xs);
+}
+
+.systemSubtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 500px;
+}
+
+.systemScroller {
+  display: flex;
+  gap: var(--space-md);
+  padding: 0 max(2rem, 5vw);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.systemScroller::-webkit-scrollbar {
+  display: none;
+}
+
+.systemStep {
+  flex: 0 0 min(340px, 80vw);
+  scroll-snap-align: start;
+  padding: var(--space-lg);
+  border: var(--border-subtle);
+  border-radius: 12px;
+  background: var(--bg-surface);
+  position: relative;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.systemStep:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: var(--bg-elevated);
+  transform: translateY(-4px);
+}
+
+.systemStepNumber {
+  font-family: var(--font-sans);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.2;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.systemStepTitle {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+  margin-bottom: var(--space-xxs);
+}
+
+.systemStepDesc {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.systemStepLine {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin-top: auto;
+}
+
+/* ============================================
+   4. PHILOSOPHY — Full-Screen Statement
+   ============================================ */
+
+.philosophySection {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xxl) max(2rem, 5vw);
+  border-top: var(--border-subtle);
+  position: relative;
+}
+
+.philosophySection::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(47, 107, 255, 0.04) 0%, transparent 70%);
   pointer-events: none;
 }
 
-/* 7. CONTACT SECTION */
-.contactSection {
-  padding-top: clamp(8rem, 15vw, 15rem);
-  padding-bottom: clamp(6rem, 12vw, 10rem);
+.philosophyInner {
+  max-width: 1000px;
 }
 
-.contactGrid {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: var(--space-xl);
-  align-items: start;
+.philosophyHeadline {
+  font-family: var(--font-sans);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0;
 }
 
-.contactLeft {
-  max-width: 480px;
+.philosophyHighlight {
+  color: var(--text-color);
 }
 
-.contactTitle {
-  font-size: 2.5rem;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin-bottom: var(--space-sm);
+/* ============================================
+   5. FRAMEWORKS — Cinematic Showcase
+   ============================================ */
+
+.frameworksSection {
+  padding: var(--space-xxl) 0;
+  border-top: var(--border-subtle);
 }
 
-.contactDesc {
-  font-size: 1.125rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-  margin-bottom: var(--space-xl);
+.frameworksHeader {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-xl);
+  padding: 0 max(2rem, 5vw);
 }
 
-.socialDirectory {
-  border-top: var(--border-strong);
-  padding-top: var(--space-sm);
-}
-
-.directoryLabel {
-  display: block;
-  font-family: var(--font-sans), monospace;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
+.frameworksTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
   margin-bottom: var(--space-xs);
 }
 
-.directoryLinks {
+.frameworksSubtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 550px;
+}
+
+.frameworksGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 max(2rem, 5vw);
+}
+
+.frameworkCard {
+  padding: var(--space-xxl) var(--space-xl);
+  background: var(--bg-surface);
+  border: var(--border-subtle);
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: relative;
+}
+
+.frameworkCard:hover {
+  background: var(--bg-surface);
+}
+
+.frameworkCardIndex {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.frameworkCardTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+.frameworkCardTrademark {
+  font-size: 0.625rem;
+  vertical-align: super;
+  color: var(--accent);
+}
+
+.frameworkCardDesc {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 400px;
+}
+
+.frameworkLabel {
+  font-weight: 700;
+  color: var(--text-color);
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+
+.frameworkCardLine {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin-top: auto;
+}
+
+/* ============================================
+   6. PROJECTS — Cinematic Showcase Cards
+   ============================================ */
+
+.projectsSection {
+  padding: var(--space-xxl) 0;
+  border-top: var(--border-subtle);
+}
+
+.projectsHeader {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-xl);
+  padding: 0 max(2rem, 5vw);
+}
+
+.projectsTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-xs);
+}
+
+.projectsSubtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 550px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 max(2rem, 5vw);
+}
+
+.projectCard {
+  border: var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-surface);
+  transition: var(--transition-smooth);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.projectCardImage {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-color) 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectCardImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(9, 9, 9, 0.8) 100%);
+  pointer-events: none;
+}
+
+.projectCardIcon {
+  font-family: var(--font-sans);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.2;
+  letter-spacing: -0.06em;
+}
+
+.projectCardBody {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: 1;
+}
+
+.projectCardTag {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.projectCardName {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+.projectCardDescription {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.projectCardMetrics {
   display: flex;
   gap: var(--space-md);
-  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: var(--space-sm);
+  border-top: var(--border-subtle);
 }
 
-.directoryLink {
-  font-size: 0.9375rem;
-  color: var(--text-color);
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  transition: var(--transition-fast);
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-}
-
-.directoryLink:hover {
-  color: var(--accent-color);
-  border-bottom-color: var(--accent-color);
-}
-
-.contactRight {
-  width: 100%;
-}
-
-/* 8. EMOTIONAL SIGN-OFF CALLOUT */
-.emotionalCalloutSection {
-  padding-top: clamp(4rem, 8vw, 8rem);
-  padding-bottom: clamp(8rem, 15vw, 15rem);
-  text-align: center;
-}
-
-.emotionalCalloutInner {
-  max-width: 900px;
-  margin: 0 auto;
+.projectCardMetric {
   display: flex;
   flex-direction: column;
+}
+
+.projectCardMetricValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: -0.02em;
+}
+
+.projectCardMetricLabel {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ============================================
+   7. FINAL CTA — Full-Screen Closer
+   ============================================ */
+
+.ctaSection {
+  min-height: 80vh;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xxl) max(2rem, 5vw);
+  border-top: var(--border-subtle);
   position: relative;
+  overflow: hidden;
 }
 
-.blueprintDivider {
-  width: 120px;
-  height: 1px;
-  background-color: var(--border-strong);
-  opacity: 0.3;
-  margin: var(--space-lg) 0;
-  position: relative;
-}
-
-.blueprintDivider::before {
+.ctaSection::before {
   content: "";
   position: absolute;
-  top: -2px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
+  width: 1000px;
+  height: 500px;
+  background: radial-gradient(ellipse at center bottom, rgba(47, 107, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.emotionalQuote {
+.ctaInner {
+  max-width: 800px;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 5vw, 4.25rem);
-  line-height: 1.1;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  color: var(--text-color);
-  margin-bottom: var(--space-md);
+  align-items: center;
+  gap: var(--space-lg);
 }
 
-.emotionalQuote span {
-  opacity: 0.55;
+.ctaHeadline {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+.ctaSubtext {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0;
+}
+
+.ctaDivider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* ============================================
+   8. THINKING & JOURNAL — Editorial Layout
+   ============================================ */
+
+.thinkingSection {
+  padding: var(--space-xxl) 0;
+  border-top: var(--border-subtle);
+}
+
+.thinkingHeader {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-xl);
+  padding: 0 max(2rem, 5vw);
+}
+
+.thinkingTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-xs);
+}
+
+.thinkingSubtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 550px;
+}
+
+.thinkingPreviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 max(2rem, 5vw);
+}
+
+.thinkingPreviewCard, .journalPreviewCard {
+  background: var(--bg-surface);
+  border: var(--border-subtle);
+  border-radius: 12px;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-decoration: none;
   transition: var(--transition-smooth);
 }
 
-.activeQuoteSpan {
-  opacity: 1 !important;
-  color: var(--accent-color);
+.thinkingPreviewCard:hover {
+  background: var(--bg-elevated);
+  transform: translateY(-4px);
 }
 
-.emotionalLeadText {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+.essayTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.essayTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.essayPreview {
+  font-size: 0.9375rem;
   color: var(--text-muted);
-  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+  margin: 0;
 }
 
-.emotionalAction {
-  margin-top: var(--space-xs);
+.journalPreviewCard {
+  background: linear-gradient(180deg, var(--bg-surface) 0%, rgba(255,255,255,0.02) 100%);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* =====================================================
-   RESPONSIVE — TABLET (≤960px)
-   ===================================================== */
-@media (max-width: 960px) {
-  /* Collapse all two-column grids to single column */
-  .heroGrid,
-  .featuredFrameworkGrid,
-  .frameworkRow,
-  .thinkingGrid,
-  .aboutGrid,
-  .newsletterProductGrid,
-  .contactGrid {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-  }
+.journalFormSmall {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: auto;
+  padding-top: var(--space-md);
+}
 
-  /* Fix reversed framework row columns */
-  .frameworkRowReverse .frameworkLeft,
-  .frameworkRowReverse .frameworkRight {
-    grid-column: auto;
-    grid-row: auto;
-  }
+.journalInputSmall {
+  background: var(--bg-elevated);
+  border: var(--border-subtle);
+  border-radius: 6px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  outline: none;
+}
 
-  /* Philosophy columns */
-  .philosophyColumns {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
+.journalInputSmall:focus {
+  border-color: var(--accent);
+}
 
-  /* Small cards: stack image above text */
-  .smallCard {
-    grid-template-columns: 1fr;
-  }
+.thinkingFooter {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xxl);
+}
 
-  .smallCardImage {
-    aspect-ratio: 16 / 9;
-    border-right: none;
-    border-bottom: 1px solid var(--card-hover-border);
+@media (max-width: 1024px) {
+  .thinkingPreviewGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  /* Hero adjustments */
-  .heroSection {
-    min-height: auto;
-    padding-top: clamp(6rem, 12vw, 9rem);
-    padding-bottom: clamp(4rem, 8vw, 6rem);
-  }
-
-  .heroRight {
-    display: none; /* hide decorative blueprint on tablet */
-  }
-
-  /* Section vertical padding */
-  .frameworksSection,
-  .thinkingSection,
-  .aboutSection,
-  .newsletterProductSection,
-  .contactSection {
-    padding-top: clamp(5rem, 10vw, 8rem);
-    padding-bottom: clamp(5rem, 10vw, 8rem);
-  }
-
-  /* Framework featured */
-  .featuredFrameworkRight {
-    display: none; /* hide diagram on tablet to keep focus on text */
-  }
-
-  /* Portrait on tablet */
-  .aboutRight {
-    display: none;
+  .journalPreviewCard {
+    grid-column: 1 / -1;
   }
 }
 
-/* =====================================================
-   RESPONSIVE — SMALL TABLET / LARGE PHONE (≤768px)
-   ===================================================== */
 @media (max-width: 768px) {
-  /* Hero */
-  .heroDesc {
-    font-size: 1.125rem;
-  }
-
-  .heroActions {
-    flex-direction: column;
-    gap: var(--space-sm);
-    align-items: flex-start;
-  }
-
-  /* Philosophy quote */
-  .philosophyContent {
-    max-width: 100%;
-  }
-
-  /* Frameworks list spacing */
-  .frameworksList {
-    gap: var(--space-xl);
-  }
-
-  .featuredFramework {
-    margin-bottom: var(--space-xl);
-  }
-
-  /* Framework right (diagram) hidden on small */
-  .frameworkRight {
-    display: none;
-  }
-
-  /* Thinking: stack grid */
-  .thinkingGrid {
+  .thinkingPreviewGrid {
     grid-template-columns: 1fr;
-  }
-
-  .secondaryCardStack {
-    gap: var(--space-sm);
-  }
-
-  /* Contact grid */
-  .contactGrid {
-    gap: var(--space-lg);
-  }
-
-  /* Social links */
-  .directoryLinks {
-    flex-direction: column;
-    gap: var(--space-xs);
-  }
-
-  /* Emotional callout */
-  .emotionalCalloutSection {
-    padding-top: clamp(3rem, 6vw, 5rem);
-    padding-bottom: clamp(5rem, 10vw, 8rem);
   }
 }
 
-/* =====================================================
-   RESPONSIVE — PHONE (≤480px)
-   ===================================================== */
-@media (max-width: 480px) {
-  /* Hero text */
-  .heroTitle {
-    font-size: clamp(2.5rem, 11vw, 3.5rem);
-    letter-spacing: -0.035em;
+.essayTag {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.essayTitle {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.essayPreview {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ============================================
+   9. WORKING TOGETHER — Process Timeline
+   ============================================ */
+
+.workingSection {
+  padding: var(--space-xxl) 0;
+  border-top: var(--border-subtle);
+}
+
+.workingHeader {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-xl);
+  padding: 0 max(2rem, 5vw);
+}
+
+.workingTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-xs);
+}
+
+.workingSubtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 550px;
+}
+
+.workingTimeline {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 max(2rem, 5vw);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.workingStep {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--space-md);
+  align-items: start;
+  position: relative;
+}
+
+.workingStep:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: -32px;
+  left: 20px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--accent) 0%, rgba(255, 255, 255, 0.1) 100%);
+  opacity: 0.3;
+}
+
+.workingStepNumber {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent);
+  background: var(--bg-surface);
+  border: var(--border-subtle);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.workingStepContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+  padding-top: 6px;
+}
+
+.workingStepTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.workingStepDesc {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (≤960px)
+   ============================================ */
+
+@media (max-width: 960px) {
+  .beliefPillars {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .heroDesc {
-    font-size: 1rem;
+  .frameworksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .thinkingLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .journalCard {
+    position: static;
     margin-bottom: var(--space-lg);
   }
 
-  .tag {
-    font-size: 0.6875rem;
-  }
-
-  /* Philosophy */
-  .philosophyQuote {
-    font-size: clamp(1.75rem, 7vw, 2.5rem);
-  }
-
-  /* Framework title */
-  .featuredFrameworkTitle {
-    font-size: clamp(1.75rem, 7vw, 2.25rem);
-  }
-
-  .frameworkTitle {
-    font-size: 1.75rem;
-  }
-
-  /* Cards */
-  .cardMain {
-    padding: var(--space-sm);
-  }
-
-  .smallCardContent {
-    padding: var(--space-sm);
-  }
-
-  /* Thinking cards — full width */
-  .thinkingGrid {
-    margin-top: var(--space-lg);
-  }
-
-  /* Section padding */
-  .frameworksSection,
-  .thinkingSection,
-  .aboutSection,
-  .newsletterProductSection,
-  .contactSection,
-  .philosophySection {
-    padding-top: clamp(4rem, 8vw, 6rem);
-    padding-bottom: clamp(4rem, 8vw, 6rem);
-  }
-
-  /* Section header meta numbers */
-  .sectionMetaNum {
-    font-size: 0.625rem;
-  }
-
-  /* Emotional callout */
-  .emotionalQuote {
-    font-size: clamp(1.875rem, 8vw, 2.75rem);
-  }
-
-  /* Contact form */
-  .contactDesc {
-    font-size: 1rem;
-  }
-
-  /* Newsletter benefits list */
-  .benefitsList {
-    gap: var(--space-xs);
+  .heroWord {
+    font-size: clamp(3.5rem, 12vw, 8rem);
   }
 }
 
+/* ============================================
+   RESPONSIVE — SMALL TABLET (≤768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 90vh;
+    padding: var(--space-xl) max(1.5rem, 4vw);
+  }
+
+  .heroCtas {
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .heroCtas .btn {
+    width: 100%;
+  }
+
+  .beliefPillars {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .systemStep {
+    flex: 0 0 min(300px, 85vw);
+  }
+
+  .philosophyHeadline {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaHeadline {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+}
+
+/* ============================================
+   RESPONSIVE — PHONE (≤480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  .heroSection {
+    min-height: 85vh;
+    padding: var(--space-xl) 1.25rem;
+  }
+
+  .heroWord {
+    font-size: clamp(3rem, 16vw, 5rem);
+  }
+
+  .heroSubheadline {
+    font-size: 0.9375rem;
+  }
+
+  .beliefPillars {
+    grid-template-columns: 1fr;
+  }
+
+  .beliefHeadline {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .systemStep {
+    flex: 0 0 min(280px, 90vw);
+  }
+
+  .frameworkCard {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .philosophySection {
+    min-height: 60vh;
+    padding: var(--space-xl) 1.25rem;
+  }
+
+  .ctaSection {
+    min-height: 60vh;
+  }
+}

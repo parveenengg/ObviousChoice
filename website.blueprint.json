@@ -1,0 +1,834 @@
+{
+  "_meta": {
+    "version": "1.2.0",
+    "created": "2026-07-15",
+    "lastUpdated": "2026-07-15",
+    "author": "Parveen Kumar",
+    "description": "The operating manual for the Obvious Choice website. This is the SINGLE SOURCE OF TRUTH. Every future AI, developer, designer, or strategist should be able to understand and rebuild the entire project from this file alone.",
+    "usage": "Read this file before making ANY change to the website. Every decision, pixel, word, and interaction documented here exists for a specific reason. Do not deviate without updating this document first."
+  },
+
+  "project": {
+    "name": "Obvious Choice",
+    "domain": "parveenkumar.co",
+    "type": "Premium Digital Sales Experience & Authority Hub",
+    "notAPortfolio": true,
+    "notALandingPage": true,
+    "notAResume": true,
+    "whatItIs": "A cinematic flagship experience acting as the central hub of an authority ecosystem. It is designed to convert high-intent founders into booked strategy calls AND build a loyal audience of medium-intent readers through editorial thinking.",
+    "primaryObjective": "Build an audience of trusted readers and convert qualified founders into booked strategy calls through a deliberate dual-path psychological progression."
+  },
+
+  "brand": {
+    "name": "Obvious Choice",
+    "statement": "Become the Obvious Choice.",
+    "tagline": "Authority isn't claimed. It's engineered.",
+    "personality": [
+      "Confident without arrogance",
+      "Sophisticated without pretension",
+      "Minimal without emptiness",
+      "Premium without excess",
+      "Intentional in every detail"
+    ],
+    "voice": {
+      "tone": "Authoritative, concise, declarative. Speaks in outcomes, not features.",
+      "readingLevel": "9th–11th grade. Simple sentences. No jargon. No buzzwords.",
+      "perspective": "First person plural ('We engineer...') for the brand. Second person ('You become...') for the visitor.",
+      "avoid": [
+        "Buzzwords like 'leverage', 'synergy', 'disruptive', 'game-changing'",
+        "AI-first messaging. AI is the implementation layer, never the headline.",
+        "Exclamation marks",
+        "Superlatives without proof",
+        "Generic marketing language",
+        "Passive voice"
+      ],
+      "examples": {
+        "good": [
+          "Authority isn't claimed. It's engineered.",
+          "People don't buy the best. They buy the obvious choice.",
+          "Consistency creates inevitability."
+        ],
+        "bad": [
+          "We leverage cutting-edge AI to supercharge your growth!",
+          "Our game-changing platform disrupts the industry!",
+          "Unlock your full potential with our AI-powered solutions!"
+        ]
+      }
+    },
+    "inspirations": {
+      "description": "The website should feel like Apple, Linear, Arc Browser, Porsche, and Stripe had a child.",
+      "apple": "Negative space, product photography language, confidence in simplicity.",
+      "linear": "Precision, dark interfaces, software-grade polish, glass morphism.",
+      "arcBrowser": "Editorial warmth in a dark interface, human touches within technical precision.",
+      "porsche": "Heritage, craft, unapologetic premium positioning, engineered confidence.",
+      "stripe": "Developer-grade documentation quality applied to marketing. Technical credibility."
+    }
+  },
+
+  "vision": {
+    "goal": "Create a premium, cinematic personal brand experience that acts as the central hub of a compounding authority ecosystem.",
+    "positioning": "We engineer authority systems that make founders the obvious choice.",
+    "corePhilosophy": "Sell the outcome (authority, trust, demand), not AI. AI is only the implementation layer.",
+    "manifesto": [
+      "People don't buy AI.",
+      "People buy trust.",
+      "People buy authority.",
+      "People buy confidence.",
+      "People buy outcomes.",
+      "AI is only the implementation layer.",
+      "The website should never feel like another AI agency website."
+    ],
+    "ecosystem": {
+      "concept": "The website is NOT the final destination. It is the HUB. Everything connects through it.",
+      "flow": [
+        "LinkedIn -> Obvious Choice Website (Hub)",
+        "From Hub Path A: Strategy Call -> Client -> Case Study -> Authority Ecosystem",
+        "From Hub Path B: Thinking -> Journal Subscription -> Community -> AI Products -> Consulting"
+      ]
+    }
+  },
+
+  "business": {
+    "type": "AI-powered Authority & Growth Systems",
+    "model": "High-ticket consulting and audience-driven systems implementation",
+    "founder": {
+      "name": "Parveen Kumar",
+      "title": "Authority Systems Engineer",
+      "email": "parveenmakwana02@gmail.com",
+      "linkedin": "https://linkedin.com/in/parveenkumar--",
+      "youtube": "https://www.youtube.com/@Parveen_Makwana",
+      "x": "https://x.com/Parveen_Engi",
+      "instagram": "https://www.instagram.com/parveen.tv/"
+    },
+    "intellectualProperty": [
+      {
+        "name": "Authority Engine™",
+        "modelId": "MODEL_01",
+        "description": "The system that transforms expertise into documented intellectual property that commands premium pricing.",
+        "purpose": "Transform raw expertise into structured, defensible IP that positions the founder as the undeniable expert."
+      },
+      {
+        "name": "Obvious Framework™",
+        "modelId": "MODEL_02",
+        "description": "The positioning methodology that makes you the default choice in your market — not through volume, but through signal.",
+        "purpose": "Strategic positioning that shifts perception from commodity to obvious choice."
+      },
+      {
+        "name": "Demand Loop™",
+        "modelId": "MODEL_03",
+        "description": "A compounding inbound system where content, authority, and trust create a self-reinforcing client attraction engine.",
+        "purpose": "Create a flywheel effect where authority generates trust, trust generates demand, demand generates premium clients."
+      },
+      {
+        "name": "Signal System™",
+        "modelId": "MODEL_04",
+        "description": "AI-powered content and distribution pipelines that amplify your authority signal across every relevant channel.",
+        "purpose": "Use AI as the implementation layer to scale the founder's authority signal without proportional effort."
+      }
+    ]
+  },
+
+  "positioning": {
+    "statement": "Helping B2B founders become the obvious choice in their market by engineering authority, trust, demand, AI systems, and business growth.",
+    "differentiation": "We don't sell AI. We sell the outcome: becoming the obvious choice. AI is how we deliver, not what we sell.",
+    "competitiveAdvantage": "Proprietary frameworks (Authority Engine™, Obvious Framework™, Demand Loop™, Signal System™) that create compounding, not linear, growth.",
+    "pricingSignal": "Premium. The website itself signals high-ticket. No pricing pages. No 'affordable' language. Strategy calls only."
+  },
+
+  "audience": {
+    "primary": {
+      "who": "B2B founders and agency owners doing $500K–$5M annually",
+      "characteristics": [
+        "Technically capable but invisible in their market",
+        "Selling execution hours, not systems",
+        "Competing on price instead of authority",
+        "Know they need positioning but don't know how to implement it",
+        "Skeptical of AI hype but open to practical systems"
+      ],
+      "painPoints": [
+        "They sound identical to every competitor",
+        "Clients choose cheaper alternatives",
+        "They're working harder but not growing",
+        "No inbound demand — always chasing clients",
+        "Their expertise is trapped in their head, not documented"
+      ],
+      "desires": [
+        "To be the default choice in their market",
+        "Premium clients who value thinking over hours",
+        "Inbound demand without constant marketing hustle",
+        "Systems that work while they sleep",
+        "To be recognized as the authority in their space"
+      ]
+    },
+    "secondary": {
+      "who": "Founders and operators seeking intellectual property and insights (The Audience)",
+      "characteristics": ["Willing to learn", "Building trust over time", "Potential future clients or advocates"]
+    },
+    "disqualified": {
+      "who": "Solopreneurs looking for cheap automation tools, startups without revenue, anyone looking for a quick fix"
+    }
+  },
+
+  "offers": {
+    "primary": {
+      "name": "Authority Systems Strategy Call",
+      "description": "A focused 30-minute strategy session to assess your current positioning and identify the authority gap.",
+      "deliverable": "A clear understanding of where you stand and a strategic path to becoming the obvious choice.",
+      "price": "Complimentary for qualified founders",
+      "cta": "Book a Call",
+      "conversionPath": "Website → Strategy Call → Proposal → Engagement"
+    },
+    "secondary": {
+      "name": "The Journal (Thinking)",
+      "description": "Weekly essays on authority, AI systems, positioning, and business growth.",
+      "deliverable": "One high-signal email every week.",
+      "price": "Free",
+      "cta": "Read the Journal / Join 200 Founders",
+      "conversionPath": "Website → Thinking Section → Subscribe → Weekly Value → Trust → Book Call"
+    },
+    "future": [
+      {
+        "name": "Authority Engine™ Implementation",
+        "description": "Full-service deployment of the Authority Engine system for your business."
+      },
+      {
+        "name": "Demand Loop™ Setup",
+        "description": "Build and deploy your compounding demand engine."
+      }
+    ]
+  },
+
+  "visitorPsychology": {
+    "journeyProgression": {
+      "description": "The website creates a deliberate psychological progression. Every section moves the visitor exactly one step forward.",
+      "stages": [
+        {
+          "stage": "Attention",
+          "trigger": "Massive, cinematic hero. BECOME THE OBVIOUS CHOICE. The scale demands attention.",
+          "section": "hero"
+        },
+        {
+          "stage": "Curiosity",
+          "trigger": "The subheadline 'Authority isn't claimed. It's engineered.' creates an open loop. How?",
+          "section": "hero"
+        },
+        {
+          "stage": "Understanding",
+          "trigger": "The Belief section reframes the problem. 'People don't buy the best. They buy the obvious choice.' This is an insight they haven't heard before.",
+          "section": "belief"
+        },
+        {
+          "stage": "Trust",
+          "trigger": "The System section shows HOW — a clear 5-step process. Process builds trust because it proves methodology, not luck.",
+          "section": "system"
+        },
+        {
+          "stage": "Authority",
+          "trigger": "The Philosophy statement ('CONSISTENCY creates INEVITABILITY') and the Frameworks section demonstrate proprietary IP. Named frameworks = authority.",
+          "section": "philosophy + frameworks"
+        },
+        {
+          "stage": "Value (The Pivot)",
+          "trigger": "The Thinking section offers immediate intellectual value without asking for a meeting. This creates a low-friction way to stay connected for those not ready to buy today.",
+          "section": "thinking"
+        },
+        {
+          "stage": "Action",
+          "trigger": "'Ready to become the Obvious Choice?' Single CTA for those with high intent.",
+          "section": "cta"
+        }
+      ]
+    },
+    "objections": {
+      "description": "Every objection is addressed silently through design, copy, and structure — never explicitly.",
+      "list": [
+        {
+          "objection": "This is just another AI agency",
+          "resolution": "The word 'AI' appears minimally. The site sells outcomes (authority, trust, demand), not technology. The design itself separates us from every AI agency site."
+        },
+        {
+          "objection": "How do I know this works?",
+          "resolution": "Named frameworks (Authority Engine™, Obvious Framework™) signal intellectual property. Named systems = proven methodology. The site itself is proof of execution quality."
+        },
+        {
+          "objection": "This is too expensive for me",
+          "resolution": "The premium design self-selects. Unqualified visitors leave. Qualified visitors feel aligned. No pricing discussion happens on the site."
+        },
+        {
+          "objection": "I'm not ready to buy today",
+          "resolution": "The Thinking section offers a way to stay in the ecosystem (subscribe to The Journal) without committing to a sales call. This captures the 98% who would otherwise bounce forever."
+        }
+      ]
+    },
+    "buyingTriggers": [
+      "Recognizing themselves in the pain points ('I sound identical to competitors')",
+      "The reframe: 'People don't buy the best. They buy the obvious choice.'",
+      "Seeing a clear system (5 stages) that feels engineered, not improvised",
+      "Named frameworks creating IP envy ('I want my own Authority Engine')",
+      "The quality gap between this site and their own online presence"
+    ],
+    "reasonsToLeave": [
+      "Not a B2B founder (wrong audience — this is acceptable attrition)",
+      "Looking for cheap/free solutions (self-selection working correctly)",
+      "Too early stage to invest in positioning (they can join the Journal and wait until they are ready)",
+      "Overwhelmed by the premium feel (rare, but possible — acceptable)"
+    ],
+    "trustSignals": [
+      "The design quality itself (Apple-level polish = professional credibility)",
+      "Named intellectual property (trademarked frameworks)",
+      "Consistent publishing of high-quality essays (Thinking section)",
+      "Confident, declarative copy (no hedging, no 'might', no 'could')"
+    ]
+  },
+
+  "websiteStrategy": {
+    "type": "Flagship Experience + Supporting Depth",
+    "objective": "The homepage acts as a flagship experience to create conviction. Supporting pages provide depth for visitors who need more evidence before booking.",
+    "conversionGoal": "Create two distinct paths for high-intent and medium-intent visitors.",
+    "experiencePhilosophy": "The visitor should FEEL the brand before they READ about it. The design communicates premium before a single word is processed.",
+    "keyPrinciples": [
+      "Every section answers exactly one question",
+      "Whitespace is preferable to decoration",
+      "Motion should communicate hierarchy, not entertain",
+      "Sell outcomes, never technology",
+      "Treat the newsletter as an editorial publication, not a marketing list"
+    ]
+  },
+
+  "conversionStrategy": {
+    "primaryConversions": [
+      {
+        "intent": "High Intent (Path A)",
+        "path": "LinkedIn → Website → Book Strategy Call → Client",
+        "capturePoint": "Final CTA section & 'Let's Talk' navbar button"
+      },
+      {
+        "intent": "Medium Intent (Path B)",
+        "path": "LinkedIn → Website → Thinking Section (Newsletter/Journal) → Weekly Trust → Book Call",
+        "capturePoint": "Thinking section subscription CTA ('Read the Journal')"
+      }
+    ],
+    "conversionPsychology": "By capturing both high and medium intent, the website compounds. Instead of a binary yes/no, visitors can opt into the ecosystem to build trust over time.",
+    "antiPatterns": [
+      "Never call it a 'Newsletter' or ask visitors to 'Subscribe for updates'.",
+      "Never put pricing on the site",
+      "Never add a chatbot",
+      "Never add pop-ups or exit-intent modals",
+      "Never use generic marketing language"
+    ]
+  },
+
+  "websiteFlow": {
+    "description": "The complete flow of the flagship experience. Each transition has a specific purpose.",
+    "flow": [
+      {
+        "order": 1,
+        "section": "hero",
+        "id": "hero",
+        "purpose": "Capture attention and create curiosity"
+      },
+      {
+        "order": 2,
+        "section": "belief",
+        "id": "belief",
+        "purpose": "Reframe the visitor's understanding of their problem"
+      },
+      {
+        "order": 3,
+        "section": "system",
+        "id": "system",
+        "purpose": "Show the clear methodology — prove this is engineered"
+      },
+      {
+        "order": 4,
+        "section": "philosophy",
+        "id": "philosophy",
+        "purpose": "Create emotional resonance with a declaration"
+      },
+      {
+        "order": 5,
+        "section": "frameworks",
+        "id": "frameworks",
+        "purpose": "Demonstrate proprietary intellectual property"
+      },
+      {
+        "order": 6,
+        "section": "thinking",
+        "id": "thinking",
+        "purpose": "Provide intellectual value and offer a low-friction way to stay connected (Path B)"
+      },
+      {
+        "order": 7,
+        "section": "cta",
+        "id": "contact",
+        "purpose": "Convert desire into action with a single, clear CTA (Path A)"
+      },
+      {
+        "order": 8,
+        "section": "footer",
+        "id": "footer",
+        "purpose": "Provide secondary navigation and social channels for continued engagement"
+      }
+    ]
+  },
+
+  "navigation": {
+    "type": "Fixed glass header",
+    "brand": "OBVIOUS.",
+    "items": [
+      { "label": "System", "href": "#system", "purpose": "Jump to how-it-works" },
+      { "label": "Work", "href": "/work", "purpose": "View case studies and experiments" },
+      { "label": "Thinking", "href": "#thinking", "purpose": "Jump to essays and journal" },
+      { "label": "Contact", "href": "#contact", "purpose": "Jump to CTA" }
+    ],
+    "cta": {
+      "label": "Let's Talk",
+      "href": "#contact",
+      "style": "btn-primary (solid white on dark)",
+      "alwaysVisible": true
+    },
+    "behavior": {
+      "desktop": "Logo left, links center, CTA right",
+      "mobile": "Logo left, hamburger right. CTA hidden (available in menu).",
+      "scroll": "Fixed position, glass background with backdrop-blur(20px) saturate(180%)"
+    },
+    "rules": [
+      "Maximum 4 navigation items + 1 CTA",
+      "Navigation links are uppercase, 0.8125rem, 500 weight",
+      "No 'Services', 'Pricing', 'Blog', or 'Newsletter' labels",
+      "No dropdowns",
+      "No sub-navigation",
+      "No icons in navigation"
+    ]
+  },
+
+  "pages": {
+    "flagship": {
+      "name": "Home / Flagship Experience",
+      "purpose": "The main conversion engine. Creates conviction and routes users to Path A or Path B.",
+      "businessGoal": "Book strategy calls (Path A) and capture subscribers (Path B)",
+      "seo": {
+        "title": "Obvious Choice — Authority Systems for Founders",
+        "description": "We engineer authority systems that make founders the obvious choice. Positioning, AI systems, and compounding demand engines.",
+        "h1": "BECOME THE OBVIOUS CHOICE",
+        "keywords": ["authority systems", "B2B positioning", "obvious choice", "founder authority", "AI growth systems"]
+      },
+      "sections": {
+        "hero": {
+          "purpose": "Capture attention in under 3 seconds. Establish the brand statement immediately.",
+          "content": {
+            "headline": "BECOME THE OBVIOUS CHOICE.",
+            "subheadline": "Authority isn't claimed. It's engineered.",
+            "primaryCta": "See the System",
+            "secondaryCta": "Book Strategy Call"
+          },
+          "layout": "Full viewport height (100vh), stacked headline, center-aligned, massive typography."
+        },
+        "belief": {
+          "purpose": "Reframe the visitor's understanding of their core problem.",
+          "content": {
+            "headline": "People don't buy the best. They buy the obvious choice.",
+            "pillars": ["Authority", "Trust", "Demand", "Clients"]
+          },
+          "layout": "4-column grid for pillars on desktop."
+        },
+        "system": {
+          "purpose": "Show the clear 5-stage methodology.",
+          "content": {
+            "headline": "How it works.",
+            "steps": ["Authority", "Content", "AI Systems", "Automation", "Growth"]
+          },
+          "layout": "Horizontal scroll container with scroll-snap."
+        },
+        "philosophy": {
+          "purpose": "Create emotional resonance with a single, powerful declaration.",
+          "content": {
+            "headline": "CONSISTENCY creates INEVITABILITY."
+          },
+          "layout": "80vh centered, massive typography, text-align center."
+        },
+        "frameworks": {
+          "purpose": "Display proprietary intellectual property.",
+          "content": {
+            "headline": "The Frameworks.",
+            "cards": ["Authority Engine™", "Obvious Framework™", "Demand Loop™", "Signal System™"]
+          },
+          "layout": "2×2 grid of glass cards."
+        },
+        "thinking": {
+          "sectionId": "thinking",
+          "purpose": "Present the editorial publication. Convert medium-intent visitors into the ecosystem.",
+          "whyThisSectionExists": "Give visitors a reason to return. Transform a static brochure into a living intellectual property hub.",
+          "businessObjective": "Build an audience of trusted readers (Path B).",
+          "visitorObjective": "Access high-signal insights without committing to a sales call.",
+          "questionItAnswers": "What does this person think about?",
+          "emotionalStateBefore": "Impressed but maybe not ready to buy today.",
+          "emotionalStateAfter": "Subscribed. 'I want to hear more from this person.'",
+          "content": {
+            "headline": {
+              "text": "Thinking.",
+              "subtext": "I write about Authority, Positioning, AI Systems, and Business Strategy. Every week."
+            },
+            "latestEssays": [
+              { "title": "Authority is an unfair advantage.", "type": "Essay" },
+              { "title": "People don't buy expertise.", "type": "Framework" },
+              { "title": "Your business doesn't need more content.", "type": "Case Study" }
+            ],
+            "cta": {
+              "text": "Read the Journal",
+              "altText": "Join 200 founders",
+              "action": "Subscribe to The Journal"
+            }
+          },
+          "layout": {
+            "desktop": "Editorial layout. Left column: Description + CTA. Right column: List of latest essays.",
+            "style": "Minimalist, text-heavy, high contrast."
+          }
+        },
+        "cta": {
+          "purpose": "Convert desire into action for high-intent visitors.",
+          "content": {
+            "headline": "Ready to become the Obvious Choice?",
+            "cta": "Book a Call"
+          },
+          "layout": "80vh centered, accent gradient glow from bottom."
+        }
+      }
+    },
+    "thinking": {
+      "name": "Thinking (Dedicated Page)",
+      "purpose": "The archive and home for the Journal. Contains essays, frameworks, and case studies.",
+      "layout": "Editorial, typography-focused layout. No sidebars. High readability."
+    },
+    "work": {
+      "name": "Work (Dedicated Page)",
+      "purpose": "Case studies and experiments. Replaces the 'Projects' section from the homepage.",
+      "layout": "Cinematic showcase of outcomes, metrics, and implementations."
+    },
+    "about": {
+      "name": "About (Dedicated Page)",
+      "purpose": "Founder philosophy and story. Not a resume. Establishes the 'why' behind the authority systems.",
+      "layout": "Narrative-driven, heavy use of negative space, highly personal but professional."
+    },
+    "contact": {
+      "name": "Contact (Dedicated Page)",
+      "purpose": "Strategy call booking and qualification.",
+      "layout": "Embed Calendly/Cal.com or simple contact form with qualification questions."
+    }
+  },
+
+  "components": {
+    "spotlight": {
+      "name": "SpotlightEffect",
+      "purpose": "Creates a radial gradient that follows the cursor, producing the 'soft moving spotlight' effect."
+    },
+    "filmGrain": {
+      "name": "FilmGrain",
+      "purpose": "Renders an animated SVG noise filter overlay for cinematic film grain texture."
+    },
+    "navbar": {
+      "name": "Navbar",
+      "purpose": "Fixed glass navigation header.",
+      "variants": { "desktop": "Logo | Links | CTA", "mobile": "Logo | Hamburger" }
+    },
+    "footer": {
+      "name": "Footer",
+      "purpose": "Brand reinforcement and secondary navigation."
+    }
+  },
+
+  "designSystem": {
+    "philosophy": "Minimal, premium, editorial, cinematic. Every element must justify its existence. When in doubt, remove it.",
+    "spacing": { "scale": { "xxs": "0.25rem", "xs": "0.5rem", "sm": "1rem", "md": "1.5rem", "lg": "3rem", "xl": "6rem", "xxl": "10rem" } },
+    "grid": { "maxWidth": "1400px", "maxWidthNarrow": "900px", "padding": "max(2rem, 5vw)" },
+    "breakpoints": { "desktop": "961px and above", "tablet": "769px–960px", "smallTablet": "481px–768px", "phone": "480px and below" },
+    "borderRadius": { "subtle": "4px", "default": "6px", "medium": "8px", "large": "12px", "philosophy": "Prefer 6-12px. Never fully round UI elements." },
+    "elevation": { "glow": "0 0 40px rgba(47, 107, 255, 0.1)" },
+    "glassEffects": { "navbar": "rgba(9, 9, 9, 0.6) + backdrop-filter: blur(20px) saturate(180%)" }
+  },
+
+  "typography": {
+    "fontFamily": "Inter (all weights: 300–900)",
+    "philosophy": "One font family, many weights. Hierarchy through size and weight, not font variety.",
+    "scale": {
+      "hero": "clamp(4.5rem, 14vw, 12rem) / weight 900 / -0.06em / uppercase",
+      "h1": "clamp(4rem, 12vw, 10rem) / weight 900 / -0.06em / uppercase",
+      "h2": "clamp(2.5rem, 6vw, 5rem) / weight 800 / -0.05em",
+      "h3": "clamp(1.5rem, 3vw, 2.5rem) / weight 600 / -0.03em",
+      "h4": "1.125rem / weight 600 / -0.02em",
+      "body": "1rem / weight 400 / line-height 1.6",
+      "small": "0.875rem / weight 400",
+      "label": "0.6875rem / weight 600 / 0.15em letter-spacing / uppercase"
+    }
+  },
+
+  "colorSystem": {
+    "philosophy": "Dark-first. The background is near-black (#090909). Color is used with extreme restraint.",
+    "palette": {
+      "background": { "base": "#090909", "surface": "#0F0F0F", "elevated": "#141414", "card": "#111111", "footer": "#060606" },
+      "text": { "primary": "#F5F5F5", "secondary": "#A0A0A0", "muted": "#666666", "dim": "#444444" },
+      "accent": { "primary": "#2F6BFF", "hover": "#4D82FF", "glow": "rgba(47, 107, 255, 0.15)" },
+      "borders": { "subtle": "rgba(255, 255, 255, 0.06)", "medium": "rgba(255, 255, 255, 0.10)" }
+    }
+  },
+
+  "themeSystem": {
+    "currentImplementation": "Dark-only. No theme toggle. No light mode.",
+    "rationale": "The cinematic, premium brand experience is designed exclusively for dark mode."
+  },
+
+  "animations": {
+    "philosophy": "Slow, smooth, premium. Animation should feel like luxury — never rushed, never flashy.",
+    "principles": [
+      "Every animation must have a purpose",
+      "Default duration: 500ms for state changes, 1000ms for reveals",
+      "Default easing: cubic-bezier(0.16, 1, 0.3, 1) — expo ease-out",
+      "No bouncing, no playful animations"
+    ],
+    "reducedMotion": "Respect prefers-reduced-motion by disabling all animations."
+  },
+
+  "techStack": {
+    "frontend": { "framework": "Next.js 16.2.10 (App Router)", "react": "React 19.2.4", "styling": "Vanilla CSS with CSS Modules" },
+    "hosting": { "recommended": "Vercel" },
+    "cms": { "current": "MDX files in /content/ directory" }
+  },
+
+  "decisionArchitecture": {
+    "hero": {
+      "currentThought": "Another AI agency or consultant.",
+      "desiredThought": "This feels completely different. This is premium.",
+      "currentEmotion": "Skeptical, distracted.",
+      "desiredEmotion": "Curious, impressed.",
+      "objection": "I don't know this person.",
+      "resolution": "Premium cinematic design + declarative positioning + flawless typography proves competence immediately.",
+      "confidenceLevelBefore": "Low",
+      "confidenceLevelAfter": "Medium",
+      "whyVisitorContinues": "The subheadline creates an open loop ('engineered') that requires an explanation.",
+      "expectedNextAction": "Scroll down."
+    },
+    "belief": {
+      "currentThought": "I'm not growing because I need more marketing or my competitors are cheaper.",
+      "desiredThought": "I'm not growing because I'm not positioned as the obvious choice.",
+      "currentEmotion": "Defensive, frustrated.",
+      "desiredEmotion": "Validated, enlightened.",
+      "objection": "Is this relevant to my specific problem?",
+      "resolution": "The pillars (Authority, Trust, Demand, Clients) directly map to the core pain points of B2B founders.",
+      "confidenceLevelBefore": "Medium",
+      "confidenceLevelAfter": "Medium-High",
+      "whyVisitorContinues": "They want to know the exact mechanism to become the obvious choice.",
+      "expectedNextAction": "Scroll to System."
+    },
+    "system": {
+      "currentThought": "Is this just theory, or does this person have a real process?",
+      "desiredThought": "This is a highly structured, repeatable methodology.",
+      "currentEmotion": "Curious but analytical.",
+      "desiredEmotion": "Trusting, confident.",
+      "objection": "Can they actually execute this?",
+      "resolution": "Breaking the solution down into 5 numbered, sequential stages proves it is an engineered process, not luck.",
+      "confidenceLevelBefore": "Medium-High",
+      "confidenceLevelAfter": "High",
+      "whyVisitorContinues": "Process validates competence. Now they want to see the depth of the thinking.",
+      "expectedNextAction": "Scroll to Philosophy."
+    },
+    "philosophy": {
+      "currentThought": "Okay, the system makes sense, but who is this person fundamentally?",
+      "desiredThought": "I align with this worldview. I want to build a business like this.",
+      "currentEmotion": "Logical.",
+      "desiredEmotion": "Inspired, emotionally aligned.",
+      "objection": "Am I going to like working with them?",
+      "resolution": "An uncompromising, bold declaration creates a polarizing filter. The right clients will love it.",
+      "confidenceLevelBefore": "High",
+      "confidenceLevelAfter": "Very High",
+      "whyVisitorContinues": "Emotional resonance creates momentum to see the actual intellectual property.",
+      "expectedNextAction": "Scroll to Frameworks."
+    },
+    "frameworks": {
+      "currentThought": "Do they have real proprietary value?",
+      "desiredThought": "They have documented, trademark-worthy IP. I want this for my business.",
+      "currentEmotion": "Impressed.",
+      "desiredEmotion": "Envious (in a good way) and ready to engage.",
+      "objection": "Is this just generic advice repackaged?",
+      "resolution": "Naming the systems (e.g., Authority Engine™) transforms invisible services into tangible, valuable assets.",
+      "confidenceLevelBefore": "Very High",
+      "confidenceLevelAfter": "Absolute",
+      "whyVisitorContinues": "They have seen enough proof. They are ready to decide their next step.",
+      "expectedNextAction": "Scroll to Thinking (Path B) or CTA (Path A)."
+    },
+    "thinking": {
+      "currentThought": "I like this, but I'm not ready to buy a $20k+ consulting engagement today.",
+      "desiredThought": "I can get this level of thinking every week for free. I need to be on this list.",
+      "currentEmotion": "Hesitant to commit to a call.",
+      "desiredEmotion": "Relieved and eager to subscribe.",
+      "objection": "I don't want to be sold to on a call yet.",
+      "resolution": "Offers a high-value, zero-friction way to stay in the ecosystem without talking to sales.",
+      "confidenceLevelBefore": "Absolute (but low buying intent)",
+      "confidenceLevelAfter": "Committed to the audience (Path B)",
+      "whyVisitorContinues": "They subscribed, or they skip because they DO want a call.",
+      "expectedNextAction": "Subscribe or scroll to CTA."
+    },
+    "cta": {
+      "currentThought": "I am ready to solve this problem right now.",
+      "desiredThought": "Booking this call is the exact right next step for my business.",
+      "currentEmotion": "Motivated, decisive.",
+      "desiredEmotion": "Committed, relieved that a solution is near.",
+      "objection": "What if it's a high-pressure sales pitch?",
+      "resolution": "Framing it as a 'Strategy Call' to 'engineer your authority system' makes it collaborative, not adversarial.",
+      "confidenceLevelBefore": "Absolute (with high buying intent)",
+      "confidenceLevelAfter": "Action taken (Path A)",
+      "whyVisitorContinues": "N/A - the goal is achieved.",
+      "expectedNextAction": "Click 'Book a Call'."
+    }
+  },
+
+  "trustArchitecture": {
+    "designQuality": "Signals premium market positioning. Humans subconsciously equate aesthetic polish with competence and high value. A flawless UI implies flawless consulting.",
+    "typography": "Strict, limited, highly structured typography creates a feeling of order, precision, and engineering. It removes chaos.",
+    "whitespace": "Creates breathing room. Scarcity of elements signals confidence. 'We don't need to shout to be heard.'",
+    "frameworks": "Naming systems (e.g., Authority Engine™) transforms invisible services into tangible Intellectual Property. It proves the thinking is repeatable.",
+    "thinking": "Publishing essays proves depth of thought. It moves the relationship from a transactional vendor to an intellectual peer.",
+    "founderStory": "Humanizes the brand. Shows that the systems were born from real-world experience, not academic theory.",
+    "workingProcess": "A clear step-by-step methodology proves this has been done before. Process eliminates risk for B2B buyers.",
+    "consistency": "The unrelenting tone and visual standard across the entire site proves that the brand can execute reliably.",
+    "clarity": "Short sentences and simple vocabulary show mastery. Only novices use jargon to sound smart. Experts simplify."
+  },
+
+  "conversionArchitecture": {
+    "pathA_HighIntent": {
+      "name": "The Client Path",
+      "journey": ["LinkedIn", "Website (Flagship)", "Book Call", "Discovery", "Proposal", "Client"],
+      "intent": "High - ready to solve their problem now.",
+      "motivation": "Pain is acute, tired of being commoditized, losing deals to inferior competitors, willing to invest immediately.",
+      "objections": ["Is this the right person?", "Can they actually do this for me?", "Do they have a real system?"],
+      "exitPoints": ["Pricing anxiety before booking", "Misaligned timing or budget"],
+      "recoveryPoints": ["Retargeting with case studies", "They follow the founder on LinkedIn and see continuous proof"],
+      "expectedConversionGoal": "Book Strategy Call (1-3% of qualified traffic)."
+    },
+    "pathB_MediumIntent": {
+      "name": "The Audience Path",
+      "journey": ["LinkedIn", "Website (Flagship)", "Thinking Section", "Join The Journal", "Weekly Trust Building", "Book Call", "Client"],
+      "intent": "Medium - curious, feeling the pain but not ready to buy or lacks immediate budget.",
+      "motivation": "Seeking insights, wants to learn the frameworks, evaluating the expert over time.",
+      "objections": ["I don't need to pay for this yet", "I can figure this out myself first"],
+      "exitPoints": ["Boredom with emails", "Content feels too generic or salesy"],
+      "recoveryPoints": ["A highly resonant essay hits their inbox exactly when they experience a specific pain point in their business"],
+      "expectedConversionGoal": "Subscribe to The Journal (10-20% of qualified traffic)."
+    }
+  },
+
+  "emotionalJourney": {
+    "hero": { "energy": "High", "mood": "Cinematic, Aspirational", "readingSpeed": "Fast", "visualDensity": "Low", "emotionalTone": "Commanding" },
+    "belief": { "energy": "Focused", "mood": "Reflective, Serious", "readingSpeed": "Medium", "visualDensity": "Medium", "emotionalTone": "Empathetic but direct" },
+    "system": { "energy": "Methodical", "mood": "Logical, Structured", "readingSpeed": "Slow (studying)", "visualDensity": "High (information heavy)", "emotionalTone": "Confident, engineered" },
+    "philosophy": { "energy": "Still", "mood": "Philosophical, Absolute", "readingSpeed": "Fast", "visualDensity": "Very Low", "emotionalTone": "Uncompromising" },
+    "frameworks": { "energy": "Intellectual", "mood": "Impressive, Proprietary", "readingSpeed": "Slow", "visualDensity": "Medium-High", "emotionalTone": "Authoritative" },
+    "thinking": { "energy": "Generous", "mood": "Editorial, Inviting", "readingSpeed": "Medium", "visualDensity": "Medium", "emotionalTone": "Thoughtful, insightful" },
+    "cta": { "energy": "Decisive", "mood": "Action-oriented", "readingSpeed": "Fast", "visualDensity": "Low", "emotionalTone": "Welcoming but exclusive" }
+  },
+
+  "visitorQuestions": {
+    "hero": "Who are you and what do you stand for?",
+    "belief": "Do you understand my specific problem?",
+    "system": "How do you actually solve this?",
+    "philosophy": "What is the core truth you believe in?",
+    "frameworks": "Is this a real system or are you making it up as you go?",
+    "thinking": "How do you think? Are you worth listening to long-term?",
+    "cta": "What happens next if I'm ready?"
+  },
+
+  "workingRelationship": {
+    "purpose": "Reduce buying anxiety by showing exactly what happens after booking.",
+    "stages": {
+      "discovery": "A 30-minute alignment call to determine if the problem matches the system. No pitching.",
+      "diagnosis": "Deep dive into current positioning, content, and market perception to find the 'authority gap'.",
+      "strategy": "Mapping the exact architecture needed to become the obvious choice.",
+      "implementation": "Building the Authority Engine, setting up the AI systems, and launching the Demand Loop.",
+      "iteration": "Refining the signal based on market feedback and inbound data.",
+      "support": "Ongoing optimization and scaling of the authority ecosystem."
+    }
+  },
+
+  "whoItsFor": {
+    "idealClients": "B2B founders, agency owners, and consultants doing $500K–$5M annually who have deep expertise but weak positioning.",
+    "goodFit": "Technically capable experts who are tired of competing on price and want to be recognized as thought leaders.",
+    "notAFit": "Solopreneurs looking for get-rich-quick schemes, companies without real expertise, founders who want to outsource their thinking entirely.",
+    "whoShouldWait": "Founders still figuring out their core offer or who haven't delivered real results for clients yet.",
+    "whoShouldReadTheJournalInstead": "Founders who have the expertise but lack the budget to hire a premium consultant right now. They can implement the ideas themselves until they are ready to scale."
+  },
+
+  "proofStrategy": {
+    "currentProof": [
+      "The design quality of the website itself (signals high capability)",
+      "The clarity and depth of the proprietary frameworks",
+      "The uncompromising, confident tone of voice"
+    ],
+    "futureProof": [
+      "Case studies showing specific revenue/authority outcomes",
+      "Client transformations and before/after positioning",
+      "Public experiments and open-source systems",
+      "High-signal essays that predict market shifts"
+    ],
+    "credibilityDrivers": "Every pixel, every word, and every framework must act as proof of competence. In the absence of traditional testimonials, the execution of the site IS the testimonial."
+  },
+
+  "contentFlywheel": {
+    "description": "How every content asset connects and reinforces the ecosystem.",
+    "flow": [
+      "LinkedIn: Short-form insights grab attention and drive traffic to the Hub.",
+      "Website (Hub): Captures traffic and routes to either immediate conversion (Call) or audience building (Journal).",
+      "Thinking (Journal): Deep-dives into the LinkedIn insights, building long-term trust.",
+      "Frameworks: Provide the structured methodology behind the thinking.",
+      "Projects/Work: Prove the frameworks actually work in the real world.",
+      "Book Call: The logical conclusion when the pain points match the proven frameworks.",
+      "Client: Generates new insights, data, and revenue.",
+      "Case Study: Documents the client win, feeding back into the flywheel.",
+      "LinkedIn: Case study is promoted, starting the loop again with higher authority."
+    ]
+  },
+
+  "futureAuthorityEcosystem": {
+    "concept": "The website is NOT the destination. It is the HUB of a massive digital ecosystem.",
+    "expansionPath": [
+      "1. Thinking / Journal (Audience building & IP generation)",
+      "2. Templates & Mini-products (Low friction entry points)",
+      "3. Community (Peer-to-peer trust and recurring revenue)",
+      "4. Courses & Cohorts (Scaled learning)",
+      "5. AI SaaS Products (Software leverage for authority systems)",
+      "6. High-ticket Consulting (For the top 1%)",
+      "7. Enterprise Implementations (B2B scale)"
+    ],
+    "integration": "Every future asset will live on or branch off from this central website blueprint. The design system, tone of voice, and core philosophy must cascade into all future products to ensure brand inevitability."
+  },
+
+  "rules": {
+    "design": [
+      "Every pixel must have a reason.",
+      "Never use more than one CTA per section.",
+      "Whitespace is preferable to decoration.",
+      "Sell outcomes, never technology.",
+      "Never call it a 'newsletter'. Use 'Thinking', 'Journal', or 'Signal'."
+    ],
+    "copy": [
+      "Every headline under 8 words.",
+      "Active voice exclusively.",
+      "No exclamation marks.",
+      "Sell the transformation, not the tool."
+    ]
+  },
+
+  "aiInstructions": {
+    "purpose": "This section instructs future AI assistants on how to work with this project. Read this BEFORE making any changes.",
+    "readFirst": [
+      "Read this entire blueprint before generating any code, copy, or design.",
+      "Read the 'rules' section and NEVER violate them."
+    ],
+    "generatingUI": [
+      "Always use CSS Modules (.module.css files).",
+      "Always use the existing CSS custom properties (--bg-color, --text-color, --accent, etc.)."
+    ],
+    "maintainingConsistency": [
+      "Never change the color palette without updating this blueprint.",
+      "Understand the 'dual path' conversion strategy before adding new sections or CTAs."
+    ]
+  }
+}

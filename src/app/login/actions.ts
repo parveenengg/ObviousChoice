@@ -1,0 +1,35 @@
+'use server'
+
+import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
+import { createClient } from '@/utils/supabase/server'
+
+export async function login(formData: FormData) {
+  const supabase = await createClient()
+
+  // type-casting here for simplicity
+  const data = {
+    email: formData.get('email') as string,
+    password: formData.get('password') as string,
+  }
+
+  const { error } = await supabase.auth.signInWithPassword(data)
+
+  if (error) {
+    // In a real app we'd return the error to the frontend, 
+    // but for now redirecting back to login with a generic error is simple.
+    // Or we can return { error: error.message } and use useFormState.
+    console.error('Login error:', error)
+    redirect('/login?error=Invalid login credentials')
+  }
+
+  revalidatePath('/dashboard', 'layout')
+  redirect('/dashboard')
+}
+
+export async function logout() {
+  const supabase = await createClient()
+  await supabase.auth.signOut()
+  
+  redirect('/login')
+}

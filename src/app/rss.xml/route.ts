@@ -1,4 +1,3 @@
-import { NextResponse } from "next/server";
 import { getAllContent } from "@/lib/mdx";
 
 export async function GET() {
@@ -14,7 +13,9 @@ export async function GET() {
           <link>${siteUrl}/thinking/${post.slug}</link>
           <guid isPermaLink="true">${siteUrl}/thinking/${post.slug}</guid>
           <pubDate>${pubDate}</pubDate>
-          <description><![CDATA[${post.frontmatter.summary}]]></description>
+          <author>parveenmakwana02@gmail.com (Parveen Kumar)</author>
+          <category><![CDATA[${post.frontmatter.category}]]></category>
+          <description><![CDATA[${post.frontmatter.summary} (Read time: ${post.frontmatter.readTime || "5 min"})]]></description>
         </item>
       `;
     })

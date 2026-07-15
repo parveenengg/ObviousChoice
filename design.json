@@ -1,0 +1,133 @@
+{
+  "project": "Obvious Choice Website Redesign",
+  "vision": {
+    "goal": "Create a premium, cinematic personal brand experience that makes visitors feel the brand before they read about it.",
+    "brand_statement": "Become the Obvious Choice.",
+    "positioning": "We engineer authority systems that make founders the obvious choice.",
+    "core_principle": "Sell the outcome (authority, trust, demand), not AI."
+  },
+  "design_language": {
+    "style": "Apple \u00d7 Porsche \u00d7 Arc Browser \u00d7 Linear",
+    "theme": "Minimal, premium, editorial, cinematic",
+    "colors": {
+      "background": "#090909",
+      "text": "#F5F5F5",
+      "accent": "#2F6BFF",
+      "optional_accent": "#8B0000"
+    },
+    "visual_elements": [
+      "Large negative space",
+      "Soft film grain",
+      "Subtle spotlight lighting",
+      "Dark chrome surfaces",
+      "Purposeful glass effects",
+      "Minimal gradients"
+    ]
+  },
+  "hero": {
+    "headline": [
+      "BECOME",
+      "THE",
+      "OBVIOUS",
+      "CHOICE."
+    ],
+    "subheadline": "Authority isn't claimed. It's engineered.",
+    "primary_cta": "See the System",
+    "secondary_cta": "Book Strategy Call"
+  },
+  "background": {
+    "effects": [
+      "Soft moving spotlight",
+      "Film grain",
+      "Dark shadows",
+      "Minimal motion"
+    ],
+    "avoid": [
+      "Particle backgrounds",
+      "Overly flashy animations"
+    ]
+  },
+  "interactions": {
+    "cursor": [
+      "Light reflections",
+      "Magnetic buttons",
+      "Subtle text reactions"
+    ],
+    "animation_style": "Slow, smooth, premium"
+  },
+  "sections": [
+    {
+      "title": "Belief",
+      "headline": "People don't buy the best. They buy the obvious choice.",
+      "content": [
+        "Authority",
+        "Trust",
+        "Demand",
+        "Clients"
+      ]
+    },
+    {
+      "title": "System",
+      "layout": "Horizontal scrolling journey",
+      "steps": [
+        "Authority",
+        "Content",
+        "AI Systems",
+        "Automation",
+        "Growth"
+      ]
+    },
+    {
+      "title": "Philosophy",
+      "headline": "CONSISTENCY creates INEVITABILITY."
+    },
+    {
+      "title": "Frameworks",
+      "items": [
+        "Authority Engine\u2122",
+        "Obvious Framework\u2122",
+        "Demand Loop\u2122",
+        "Signal System\u2122"
+      ]
+    },
+    {
+      "title": "Projects",
+      "style": "Cinematic showcase cards",
+      "hover": [
+        "Video",
+        "Metrics",
+        "Process"
+      ]
+    },
+    {
+      "title": "Final CTA",
+      "headline": "Ready to become the Obvious Choice?",
+      "button": "Book a Call"
+    }
+  ],
+  "typography": {
+    "style": "Editorial",
+    "heading": "Massive bold typography",
+    "body": "Small, readable, minimal"
+  },
+  "recommended_stack": {
+    "animations": [
+      "Framer Motion",
+      "GSAP",
+      "Lenis",
+      "SplitType"
+    ]
+  },
+  "remove": [
+    "Too many cards",
+    "Too many borders",
+    "Too much blue",
+    "Generic icons",
+    "Multiple CTAs per screen",
+    "Buzzword-heavy AI messaging"
+  ],
+  "experience": {
+    "type": "Single immersive scrolling experience",
+    "objective": "Every section reinforces the message 'Become the Obvious Choice.'"
+  }
+}

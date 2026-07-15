@@ -1,0 +1,77 @@
+.journalForm {
+  display: flex;
+  gap: var(--space-sm);
+  max-width: 500px;
+}
+
+.journalInput {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.journalInput:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.journalInput:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.journalButton {
+  background: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.journalButton:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.journalButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.journalButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.successState {
+  padding: var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-color);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.errorState {
+  color: #ffb3b3;
+  font-size: 0.875rem;
+  margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+  .journalForm {
+    flex-direction: column;
+  }
+}

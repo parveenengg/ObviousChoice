@@ -1,0 +1,141 @@
+.canvas {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.header {
+  padding: 180px max(2rem, 5vw) 80px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 max(2rem, 5vw) var(--space-xxxl);
+}
+
+.caseFile {
+  margin-bottom: 120px;
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.caseHeader {
+  margin-bottom: var(--space-xl);
+}
+
+.caseClient {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.caseTitle {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.caseSummary {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.caseMetrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metricBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: -0.02em;
+}
+
+.metricLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.caseBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.phase {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.phaseLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.phaseContent {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.phaseQuote {
+  margin: var(--space-md) 0 0 0;
+  padding-left: var(--space-md);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.125rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 140px max(1.5rem, 4vw) 60px;
+  }
+}

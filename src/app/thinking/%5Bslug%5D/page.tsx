@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getContentBySlug, getContentSlugs } from "@/lib/mdx";
+import JournalForm from "@/components/JournalForm";
 import styles from "./post.module.css";
 
 interface PostPageProps {
@@ -33,8 +34,32 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.frontmatter.title,
+    "abstract": post.frontmatter.summary,
+    "datePublished": new Date(post.frontmatter.date).toISOString(),
+    "dateModified": new Date(post.frontmatter.date).toISOString(),
+    "timeRequired": `PT${(post.frontmatter.readTime || "5 min").split(' ')[0]}M`,
+    "author": {
+      "@id": "https://parveenkumar.co/#person"
+    },
+    "publisher": {
+      "@id": "https://parveenkumar.co/#organization"
+    },
+    "about": [
+      { "@type": "Thing", "name": post.frontmatter.category }
+    ],
+    "url": `https://parveenkumar.co/thinking/${slug}`
+  };
+
   return (
     <article className="container-content section animate-fade-in">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
       <div className={styles.backWrapper}>
         <Link href="/thinking" className={styles.backLink}>
           <ArrowLeft size={16} /> Back to thinking
@@ -60,6 +85,14 @@ export default async function PostPage({ params }: PostPageProps) {
 
       <div className={styles.content}>
         <MDXRemote source={post.content} />
+      </div>
+
+      <div className={styles.journalSection}>
+        <div className={styles.journalHeader}>
+          <h3>The Journal</h3>
+          <p>Join founders and partners receiving one strategic essay every week.</p>
+        </div>
+        <JournalForm />
       </div>
     </article>
   );

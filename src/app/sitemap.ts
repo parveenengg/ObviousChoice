@@ -5,7 +5,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = "https://parveenkumar.co";
 
   // Static routes
-  const routes = ["", "/thinking", "/frameworks", "/newsletter"].map((route) => ({
+  const routes = ["", "/thinking", "/work", "/about", "/contact"].map((route) => ({
     url: `${siteUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
@@ -20,12 +20,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  const frameworkSlugs = getContentSlugs("frameworks").map((slug) => ({
-    url: `${siteUrl}/frameworks/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
-
-  return [...routes, ...thinkingSlugs, ...frameworkSlugs];
+  return [...routes, ...thinkingSlugs];
 }
