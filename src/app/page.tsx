@@ -64,7 +64,7 @@ export default function Home() {
           <Link href="#system" className="btn btn-primary" aria-label="See how the Authority Engine system works">
             See the System
           </Link>
-          <Link href="#contact" className="btn btn-ghost" aria-label="Book a strategic alignment call with Parveen">
+          <Link href="/contact" className="btn btn-ghost" aria-label="Book a strategic alignment call with Parveen">
             Book Strategy Call
           </Link>
         </div>
@@ -286,60 +286,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className={styles.projectsGrid}>
-          {/* Project 1 */}
-          <Link href="/work" className={styles.projectCard}>
-            <div className={styles.projectCardImage}>
-              <div className={styles.projectCardImageOverlay} />
-              <span className={styles.projectCardIcon}>ACME</span>
-            </div>
-            <div className={styles.projectCardBody}>
-              <span className={styles.projectCardTag}>Enterprise SaaS</span>
-              <h3 className={styles.projectCardName}>Acme Corp</h3>
-              <div className={styles.projectCardDescription}>
-                <span className={styles.frameworkLabel}>Challenge:</span> Trapped in a feature-parity price war.<br/>
-                <span className={styles.frameworkLabel}>Strategy:</span> Pivoted to competing on proprietary methodology.<br/>
-                <span className={styles.frameworkLabel}>Outcome:</span> Escaped churn spiral, closed enterprise deals.
-              </div>
-              <div className={styles.projectCardMetrics}>
-                <div className={styles.projectCardMetric}>
-                  <span className={styles.projectCardMetricValue}>3x</span>
-                  <span className={styles.projectCardMetricLabel}>ACV Increase</span>
-                </div>
-                <div className={styles.projectCardMetric}>
-                  <span className={styles.projectCardMetricValue}>45%</span>
-                  <span className={styles.projectCardMetricLabel}>Inbound Velocity</span>
-                </div>
-              </div>
-            </div>
-          </Link>
-
-          {/* Project 2 */}
-          <Link href="/work" className={styles.projectCard}>
-            <div className={styles.projectCardImage}>
-              <div className={styles.projectCardImageOverlay} />
-              <span className={styles.projectCardIcon}>VANTAGE</span>
-            </div>
-            <div className={styles.projectCardBody}>
-              <span className={styles.projectCardTag}>B2B Consulting</span>
-              <h3 className={styles.projectCardName}>Vantage Partners</h3>
-              <div className={styles.projectCardDescription}>
-                <span className={styles.frameworkLabel}>Challenge:</span> Selling execution hours, hitting a revenue ceiling.<br/>
-                <span className={styles.frameworkLabel}>Strategy:</span> Documented founder&apos;s IP into productized frameworks.<br/>
-                <span className={styles.frameworkLabel}>Outcome:</span> Scalable consulting model decoupled from hours.
-              </div>
-              <div className={styles.projectCardMetrics}>
-                <div className={styles.projectCardMetric}>
-                  <span className={styles.projectCardMetricValue}>$2.1M</span>
-                  <span className={styles.projectCardMetricLabel}>New Pipeline</span>
-                </div>
-                <div className={styles.projectCardMetric}>
-                  <span className={styles.projectCardMetricValue}>90 Days</span>
-                  <span className={styles.projectCardMetricLabel}>To Market</span>
-                </div>
-              </div>
-            </div>
-          </Link>
+        <div style={{ textAlign: 'center', padding: '4rem 0', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic', maxWidth: '600px', margin: '0 auto' }}>
+          <p>We are currently working with some clients. Soon, execution and testimonials will be displayed here.</p>
         </div>
       </section>
 
@@ -460,7 +408,7 @@ export default function Home() {
           <p className={styles.ctaSubtext}>
             Book a 30-minute strategy call to discuss your business, identify opportunities, and determine whether we&apos;re a good fit.
           </p>
-          <Link href="mailto:parveenmakwana02@gmail.com?subject=Strategic%20Alignment%20Request" className="btn btn-primary">
+          <Link href="/contact" className="btn btn-primary">
             Book a Call <ArrowRight size={16} />
           </Link>
           <div className={styles.ctaDivider} />
