@@ -676,7 +676,7 @@
   background: var(--bg-surface);
   border: var(--border-subtle);
   border-radius: 12px;
-  padding: var(--space-xl);
+  padding: var(--space-lg);
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
