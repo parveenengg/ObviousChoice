@@ -6,6 +6,7 @@ import { createClient } from '@/utils/supabase/server'; // We can use the server
 const strategyCallSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
+  phone: z.string().optional(),
   company: z.string().min(1, "Company is required"),
   challenge: z.string().min(1, "Challenge description is required"),
 });
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
       );
     }
     
-    const { name, email, company, challenge } = parsedData.data;
+    const { name, email, phone, company, challenge } = parsedData.data;
 
     // 2. Supabase Insert
     const supabase = await createClient();
@@ -36,6 +37,7 @@ export async function POST(request: Request) {
         {
           name,
           email,
+          phone: phone || null,
           company, // Mapping the form's "Company & URL" to the company column
           challenge,
           status: 'new',

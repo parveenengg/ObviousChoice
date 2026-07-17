@@ -17,6 +17,7 @@ export default function StrategyForm() {
     const data = {
       name: formData.get("name"),
       email: formData.get("email"),
+      phone: formData.get("phone"),
       company: formData.get("company"),
       challenge: formData.get("challenge"),
     };
@@ -71,6 +72,11 @@ export default function StrategyForm() {
       <div className={styles.field}>
         <label htmlFor="email" className={styles.label}>Work Email</label>
         <input type="email" id="email" name="email" className={styles.input} required aria-required="true" disabled={status === "loading"} />
+      </div>
+
+      <div className={styles.field}>
+        <label htmlFor="phone" className={styles.label}>Phone Number</label>
+        <input type="tel" id="phone" name="phone" className={styles.input} placeholder="+1 (555) 000-0000" disabled={status === "loading"} />
       </div>
       
       <div className={styles.field}>
